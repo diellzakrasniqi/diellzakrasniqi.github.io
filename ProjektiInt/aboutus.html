@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html manifest="demo.appcache">
+<head>
+<title>About us</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="Stylesheet" type="text/css" href="aboutus.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+     /* Perdorimi i jQuery per te filtruar/kerkuar per elemente specifike.
+     Ne kete shembull kemi performuar nje kerkim case-insensitive per items ne nje tabele.
+Pershkrimi: Ne përdorim jQuery për të bere loop nëpër
+ çdo rresht të tabelës për të parë nëse ka ndonjë vlerë teksti që përputhet
+  me vlerën e fushës qe e shkruajme. Metoda toggle() fsheh rreshtin (display:none) 
+  që nuk përputhet me kërkimin. Ne përdorim metodën DOM për toLowerCase ()
+   për ta kthyer tekstin në një shkronja te vogla, gjë që e bën kerkimin
+   case-sensitive (psh nese duam te kerkojm Anja,mund te shkruajm anja,ose edhe ANJA).
+*/
+
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+<!--PERDORIMI I JQUERY DUKE PERDORUR METODEN ON() permes te ciles ne kete rast shtojme 3 event handlers tek elementi <p>  -->
+<script>
+$(document).ready(function(){
+    $("#qq").on({
+        mouseenter: function(){
+            $(this).css("background-color", "#f0b3ff");
+        },  
+        mouseleave: function(){
+            $(this).css("background-color", "#ffb3b3");
+        }, 
+        click: function(){
+            $(this).css("background-color", "#ff99ff");
+        }  
+    });
+});
+//perdorimi i SESSION STORAGE
+function clickCounter() {
+    if(typeof(Storage) !== "undefined") {
+        if (sessionStorage.clickcount) {
+            sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+        } else {
+            sessionStorage.clickcount = 1;
+        }
+        document.getElementById("result").innerHTML = "You have clicked the button " + sessionStorage.clickcount + " time(s) in this session.";
+    } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+    }
+}
+
+</script>
+<style>
+body{overflow-x:hidden;}/*Perdorimi i elementit overflow-x qe eleminon horizontal scrollbar*/
+
+* {
+    box-sizing: border-box;
+}
+
+.column {
+	float:left;
+    width: 30%;
+    padding: 30px;
+}
+
+/* Clearfix (clear floats) */
+.row ::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.row {margin-left:300px;
+margin-top:80px;}
+ 
+
+#para1 { border:2px solid #e699ff;
+width:700px;
+height:50px;
+border-radius:10px;
+margin-left:400px;
+padding:40px;
+}
+
+
+#div2 {margin-left:1000px;
+}
+#div3 {margin-left:300px;
+margin-top:-205px;}
+#div4 {margin-left:650px;
+margin-top:-170px;}
+
+#panel, .flip {
+    font-size: 16px;
+    padding: 10px;
+    text-align: center;
+    background-color: #f9e6ff;
+    color: black;
+    border: solid 1px #e699ff;
+    margin-left:350px;
+	width:800px;
+	border-radius:13px;
+}
+
+#panel {
+    display: none;
+}
+.flip {margin-top:-150px;}
+ #panel {margin-top:0px;}
+
+ <!-- perdorimi i pseudo-elementit SELECTION -->
+ .p11::selection {background-color:black;
+ color:white;}
+ 
+ #travel1 {opacity:0.5;}
+ #travel1:hover {opacity:1;}
+ 
+ #paragrafi1 {text-transform:uppercase;}
+
+ #div5 {margin-left:400px;
+ padding:10px;
+ outline-style:groove;
+ outline-color:	#ff99cc;
+ outline-width:2px;
+ outline-offset:2px;}
+
+ 
+ #sel {background-color:#ffffcc;
+ width:200px;
+ height:30px;
+ font-size:20x;
+ font-family:monospace;
+ color:black;
+ border-radius:14px;}
+ 
+ 
+ #ditlindja { width:200px;
+ height:30px;
+ background-color:#ffffcc;
+ font-size:15px;
+  font-family:monospace;
+  border-radius:14px;
+}
+.cities {width:200px;
+ height:30px;
+ background-color:#ffffcc;
+ font-size:15px;
+  font-family:monospace;
+  border-radius:14px;
+  }
+  
+  #sub1 {background-color:#ffffcc;
+  border-radius:10px;
+  width:100px;
+  height:50px;
+  margin-left:280px;
+}
+#sub1:hover{
+background-color:#ff99cc;}
+#butoni5:hover{background-color:#ff99cc;}
+
+#div6 {margin-left:310px;
+height:180px;}
+#butoni5 {background-color:#ffffcc;
+  border-radius:10px;
+  width:100px;
+  height:50px;
+}
+</style>
+</head>
+<body>
+
+<div class="sidenav">
+  <a href="homepage.html">Home</a>
+ 
+  <button class="submenyja">Topics 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+      <a href="technology.html">Technology</a>
+
+    <a href="sportculture.html">Sport and Culture</a>
+    <a href="psikologji.html">Psychology</a>
+  </div>
+  <a href="contact.html">Contact</a>
+<button class="submenyja">Other
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="fashion.html">Fashion</a>
+    <a href="travelfood.html">Travel and Food</a>
+  </div>
+</div>
+
+
+
+<script>
+/* Loop through all dropdown buttons to toggle between hiding 
+and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("submenyja");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+</script>
+
+<p id="para1" style="Text-align:Center;">
+<q id="qq">The more that you read, the more things you will know. The more that you learn, the more places you’ll go.</q> <cite>– Dr. Seuss</cite>
+
+<div class="row">
+  <div class="column">
+    <img src="aboutdiellza.jpg" alt="Diellza Krasniqi" style="width:100%">
+	<p style="font-size:14px;font-family:Monospace;text-decoration:underline;text-align:center;">Diellza Krasniqi</p>
+	<p style="font-size:10px;font-style:italic;text-align:center;color:red;">CO-FOUNDER & CEO</p>
+	<p style="font-size:13px;font-style:italic;">With more than fifteen years of experience in HR and comp&ben
+	Diellza has become an expert in the strategic design of comp systems 
+	and paycosts management. His hobbies are job evaluation and sales incentive plans.
+	She owns the first Ph.D. in comp&ben in central Europe.</p>
+  </div>
+  <div class="column">
+    <img src="aboutnjomza.jpg" alt="Njomza Zogaj" style="width:100%">
+		<p style="font-size:14px;font-family:Monospace;text-decoration:underline;text-align:center;">Njomza Zogaj</p>
+			<p style="font-size:10px;font-style:italic;text-align:center;color:red;">BUSINESS DEVELOPMENT MANAGER</p>
+		<p style="font-size:13px;font-style:italic;">	Njomza is an expert analyst with more than ten years of multi-markets salary 
+			and benefits analytics and data integration. She designs and develops BDA analytical 
+			methodologies and tools and supervises all data processes. Njomza prepares tailor-made outputs and tools for our clients.</p>
+  </div>
+  <div class="column">
+    <img src="aboutseid.jpg" alt="Seid Rrudhani" style="width:100%">
+		<p style="font-size:14px;font-family:Monospace;text-decoration:underline;text-align:center;">Seid Rrudhani</p>
+			<p style="font-size:10px;font-style:italic;text-align:center;color:red;">GRAPHIC DESIGNER</p>
+		<p style="font-size:13px;font-style:italic;">	Seid studied visual arts which has given him the base for his 10+ year journey 
+			specializing in graphic design. Jan built upon his visual communication experience
+			by studying at the Department of Art Culture where he managed to gain a broad overview in arts.
+			At BDA he is responsible for all graphic outputs and a complete visual identity of the company.</p>
+  </div>
+</div>
+<div id= "div2">
+<canvas id="myCanvas" width="250" height="200" style="border:1px solid blurywood;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+<script>
+/* Perdorimi i elementit canvas duke perdorur disa nga metodat si beginPath(), arc() per vizatimin e rrethit, stroke() per te vendosur vijat, font,fillText()*/
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(120,100,100,0,2*Math.PI);
+ctx.strokeStyle="black";
+ctx.stroke();
+ctx.font = "16px Monospace ";
+ctx.fillText("I do not fear",60,60);
+ctx.fillText("computers",80,80);
+ctx.fillText(" I fear lack of them.",30,100);
+ctx.font="16px Arial";
+ctx.fillStyle="red";
+ctx.fillText("**********",89,140);
+
+</script> </div>
+
+<div id= "div3">
+<canvas id="myCanvas1" width="250" height="200" style="border:1px solid blurywood;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+<script>
+var c = document.getElementById("myCanvas1");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(120,100,100,0,2*Math.PI);
+ctx.strokeStyle="black";
+ctx.stroke();
+ctx.font = "16px Monospace";
+ctx.fillText("You can’t win",60,60);
+ctx.fillText("unless you" ,80,80);
+ctx.fillText("learn how to lose!" ,50,100);
+ctx.font="16px Arial";
+ctx.fillStyle="red";
+ctx.fillText("**********",89,140);
+
+</script> </div>
+ 
+ <div id="div4">
+ <!--Perdorimi i svg elementit duke perdorur elementin <ellipse> per te vizatuar elipsen si dhe elementin <text> per te shkruar text -->
+<svg height="400" width="700">
+  
+  <ellipse cx="130" cy="90" rx="105" ry="75" fill="#ffccff" />
+    <text fill="#ffffff" font-size="13" font-family="Verdana" x="120" y="40">...</text>
+  <text fill="#ffffff" font-size="13" font-family="Verdana" x="80" y="60">The Beautiful </text>
+  <text fill="#ffffff" font-size="13" font-family="Verdana" x="60" y="80">thing about learning</text>
+  <text fill="#ffffff" font-size="13" font-family="Verdana" x="70" y="100"> is nobody can take it </text>
+  <text fill="#ffffff" font-size="13" font-family="Verdana" x="80" y="120">away from you. </text>
+      <text fill="#ffffff" font-size="13" font-family="Verdana" x="120" y="140">...</text>
+
+Sorry, your browser does not support inline SVG.
+</svg></div>
+
+<p class="flip" id="paragrafi1" onclick="myFunction()">Click to read about why we choosed these topics...</p>
+
+<div id="panel">
+  <p class="p11"><strong>Why Technology?</strong> Nowdays,Technology has grown faster and still growing, it has made our life comfortable.<br>
+  Technology can be a powerful tool for transforming learning. It can help affirm and advance relationships<br>
+  between educators and students, reinvent our approaches to learning and collaboration, shrink long-standing <br>
+  equity and accessibility gaps, and adapt learning experiences to meet the needs of all learners.</p>
+  <p class="p11"><strong>Why Sport?</strong> Looking at a variety of sports from team games such as rugby, cricket, <br>
+  and football to games for individuals such as golf, tennis, and skiing, it considers how these first emerged <br>
+  and captivated the interest of ordinary people, and how sport has been transformed within our daily lives.</br>
+</p>
+  <p class="p11"><strong>Why Fashion?</strong> Fashion is what we visualize. It is the inner feeling of every human being<br>
+  to present himself / herself according to one's own thinking. Fashion is a term commonly <br>
+  used in relation to clothes, garments, textiles etc.</p>
+  <p class="p11"><strong>Why Psychology?</strong>  Psychology is the scientific study of the mind and behavior. <br>
+  Psychology is a multifaceted discipline and includes many sub-fields of study such areas<Br>
+  as human development, sports, health, clinical, social behavior and cognitive processes.</p>
+  <p class="p11"><strong>Why travel around the world?</strong> Traveling is easier than you think. Travel opens your eyes. 
+  Traveling helps you learn who you are. Travel creates meaningful relationships. Traveling develops 
+  skills you didn't know you had. Travel helps you learn new languages. Travel means adventure. 
+  Traveling gives you perspective.</p>
+  <figure>
+  <img src="travel1.jpg" id="travel1" alt="Travel around the World" title="Travel" width="304" height="228">
+    <figcaption>Fig.1 - Travel</figcaption>
+</figure>
+</div><br><br><Br><br>
+
+<script>
+/*Perdorimi i nje funksionin JS DOM duke perdorur style property per te mos paraqitur elementin div  */
+function myFunction() {
+    document.getElementById("panel").style.display = "block";
+}
+</script>
+
+
+
+
+<div  id="div5" style="border:1px solid black;width:700px;height:800px;">
+<p style="text-align:center;font-weight:bold;"><i>	&hearts;	&hearts;	&hearts;Let us know more about you!	&hearts;	&hearts;	&hearts;</i>
+<!--Perdorimi i elementit <select> te formes -->
+<form id="forma11">
+<p><b> <em>Where are you from?</em></b></p>
+<select id="sel" name="cities" required>
+<option name=" " > </option>
+<option name="Prishtine" >Pristina</option>
+<option name="London" >London</option>
+<option name="Helsinki" >Helsinki</option>
+<option name="Praga" >Praga</option>
+<option name="Berlin" >Berlin</option>
+</select>
+
+<p><b><Em> When is your birthday?</em></b></p>
+<input id="ditlindja" type="date" name="date" required/>
+
+
+
+<p><b> <em>What are your favourite sports?</em></b></p>
+<!-- Perdorimi i input type="checkbox" per te definuar nje checkbox duke perdorur CSS per ta stiluar checkbox-in -->
+<label class="container">Footboll
+  <input type="checkbox" name="football">
+  <span class="checkmark"></span>
+</label>
+<label class="container">Tenis
+  <input type="checkbox" name="tenis">
+  <span class="checkmark"></span>
+</label>
+<label class="container">Skiing
+  <input type="checkbox" name="skiing">
+  <span class="checkmark"></span>
+</label>
+<label class="container" >Basketball
+  <input type="checkbox" name="basketball">
+  <span class="checkmark"></span>
+</label>
+<label class="container" >Other
+  <input type="checkbox" name="Other">
+  <span class="checkmark"></span>
+</label>
+<!-- Perdorimi i elementit <datalist>  qe specifikion nje list te opsioneve pre-definded per nje <input> element -->
+<p><b><em>Which city do you want to visit?</em></b></p>
+<input list="cities"  class="cities" required>
+<datalist id="cities">
+<option value="Bruges">
+<option value="Budapest">
+<option value="Rome">
+<option value="Florence">
+<option value="Amsterdam">
+<option value="Rio de Janeiro">
+<option value="Lisbon">
+<option value="Prague">
+<option value="Munchen">
+<option value="Baku">
+<option value="Skopje">
+<option value="Tirana">
+<option value="New York">
+<option value="Berlin">
+<option value="Tokyo">
+</datalist><br><br>
+
+
+
+<p><b><em>Pick just one favourite food!</em></b></p>
+<ol id="lista1">
+<li><input  type="radio" name="food" value="Pizza">Pizza</li>
+<li><input  type="radio" name="food" value="French Fries">French Fries</li>
+<li><input type="radio" name="food" value="Pasta">Pasta</li>
+<li><input type="radio" name="food" value="Steak">Steak</li>
+<li><input type="radio" name="food" value="Burgers">Burgers</li>
+<li><input type="radio" name="food" value="Sushi">Sushi</li>
+<li><input type="radio" name="food" value="Bacon">Bacon</li>
+</ol>
+
+<input type="Submit" id="sub1" value="SUBMIT"/>
+<button id="butoni5" onclick="clickCounter()" type="button">CLICK</button>
+
+
+</form>
+<p id="result"></p>
+<div style="width:300px;height:200px;margin:auto;">
+
+<p style="font-style:italic;" id="demo3"></p>
+</div>
+
+<script>
+/*Perdorimi i jQuery duke perdorur form eventin "submit" per paraqitjen e nje alert box kur klikojm ne butonin submit  */
+$(document).ready(function(){
+    $("#forma11").submit(function(){
+        alert("Thank you for your information...");
+    });
+}); 
+
+</script>
+</div>
+
+<div id="div6">
+		<p style="font-size:22px;font-family:Monospace;text-decoration:underline;color:#ff99cc;">OUR TEAM</p>
+<dl>
+<dt>-Tomas Jurcik</dt>
+<dd><em>Tomas is a seasoned comp&ben expert having spent almost <em id="numer"></em> years in various senior C&B. </em> </dd><BR>
+<script><!-- Perdorim i nje JS operatori per shumezim *-->
+var x=4,y=5,z;
+z=x*y;
+document.getElementById("numer").innerHTML=z;
+</script>
+<dt>-<span id="var1"></span> Svanström</dt>
+<!-- perdorimi i nje JS variable string -->
+<script>
+var str1="Carl";
+var str2="Gustav";
+document.getElementById("var1").innerHTML=str1+" "+str2;
+</script>
+<dd><em>Carl Gustav is board member of an international investment bank.</em></dd><BR>
+<dt>-Jan Hermann</dt>
+<dd><em>Jan has many years of experience in data processing and analysis.</em></dd>
+</dl>
+</div>
+<div class="row1">
+  <div class="column1">
+    <img src="honza.png"  style="width:100%">
+	</div>
+	<div class="row1">
+  <div class="column1">
+    <img src="romanfoto.jpg" title="Maria Doe"	style="width:100%">
+	</div>
+	<div class="row1">
+  <div class="column1">
+    <img src="misa.png" style="width:100%">
+	</div>
+	</div></div></div>
+	<p align="center">Type Firstname,Lastname or Email in the input field to search the employees in our company!</p>  
+<input id="myInput" type="text" placeholder="Search.." style="margin-left:550px;">
+<br><br>
+
+<table>
+  <thead>
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody id="myTable">
+    <tr>
+      <td>Maria</td>
+      <td>Doe</td>
+      <td>mariad@outlook.com</td>
+    </tr>
+    <tr>
+      <td>Christian</td>
+      <td>Malu</td>
+      <td>chmalu@mail.com</td>
+    </tr>
+    <tr>
+      <td>Omar</td>
+      <td>Dooley</td>
+      <td>omar.dooley@gmail.com</td>
+    </tr>
+    <tr>
+      <td>Anja</td>
+      <td>Ravendale</td>
+      <td>anja_r@ioutlook.com</td>
+    </tr>
+  </tbody>
+</table>
+
+ 
+<div id="doc" width="1000" style="margin-left:500px">
+
+	
+
+
+<p>Click the button to get our coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+/*PERDORIMI I HTML5 GEOLOCATION PER KOORDINATA */
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.watchPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+    
+function showPosition(position) {
+    x.innerHTML="Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude;
+}
+
+
+</script>
+</div>
+<!-- Perdorimi i formes duke perdorur js funksione per validimin e fushes se paswordit,gjithashtu edhe perdodur edhe atributi pattern-->
+<div class="containervalidation" >
+  <p style="color:blue;text-align:Center">Log in if you are a member board</p>
+
+  <form id="forma12">
+    <label for="usrname" >Username</label>
+
+    <input class="inputt" type="text" id="usrname" name="usrname" required>
+<script>
+/* Perdorimi i nje funksioni per te validuar input field e username duke perdorur regex,pra lejohen shkronjat e vogla dhe te medha nga a-z dhe gjatesia duhet te jet
+min 5 karaktere dhe max 10*/
+function usernamevalid(){
+    var usern = document.getElementById("usrname");
+    var RE = /^[a-zA-Z]{5,10}/;
+    if(!RE.test(usern.value))
+    {
+        alert("You have entered an invalid username");
+        return false;
+    }
+    else
+	    {
+        alert("You have entered a valid username");
+    }
+}
+</script>
+    <label for="psw">Password</label>
+    <input  class="inputt" type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+    		<button type="button" id="username1" onclick="usernamevalid()" style="margin-left:0px;;width:120px;padding:10px; border-radius: 4px;">Test Username</button>
+
+    <input class="inputt" type="submit" id="ssub" value="Submit" style="margin-left:150px;width:120px">
+
+  </form>
+</div>
+
+<div id="message">
+  <h4 align="center">Password must contain the following:</h4>
+  <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+  <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+  <p id="number" class="invalid">A <b>number</b></p>
+  <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+</div>
+				
+<script>
+/* */
+var myInput = document.getElementById("psw");
+var letter = document.getElementById("letter");
+var capital = document.getElementById("capital");
+var number = document.getElementById("number");
+var length = document.getElementById("length");
+
+// Kur useri te klikon ne fushen e paswordit ,paraqit message box
+myInput.onfocus = function() {
+    document.getElementById("message").style.display = "block";
+}
+
+//  Kur useri te klikon ne fushen e paswordit ,fsheh message box
+myInput.onblur = function() {
+    document.getElementById("message").style.display = "none";
+}
+
+// Kur useeri fillon te shkruan diqka brenda fushes se paswordit 
+myInput.onkeyup = function() {
+  // Valido shkronjat e vogla
+  var lowerCaseLetters = /[a-z]/g;
+  if(myInput.value.match(lowerCaseLetters)) {  
+    letter.classList.remove("invalid");
+    letter.classList.add("valid");
+  } else {
+    letter.classList.remove("valid");
+    letter.classList.add("invalid");
+  }
+  
+  // valido shkronjat e medha
+  var upperCaseLetters = /[A-Z]/g;
+  if(myInput.value.match(upperCaseLetters)) {  
+    capital.classList.remove("invalid");
+    capital.classList.add("valid");
+  } else {
+    capital.classList.remove("valid");
+    capital.classList.add("invalid");
+  }
+
+  // valido numrat
+  var numbers = /[0-9]/g;
+  if(myInput.value.match(numbers)) {  
+    number.classList.remove("invalid");
+    number.classList.add("valid");
+  } else {
+    number.classList.remove("valid");
+    number.classList.add("invalid");
+  }
+  
+  // valido gjatesine e karaktereve
+  if(myInput.value.length >= 8) {
+    length.classList.remove("invalid");
+    length.classList.add("valid");
+  } else {
+    length.classList.remove("valid");
+    length.classList.add("invalid");
+  }
+}
+</script>
+<script>
+/*Perdorimi i jQuery duke perdorur form eventin per paraqitjen e nje alert box kur klikojm ne butonin submit  */
+$(document).ready(function(){
+    $("#forma12").submit(function(){
+        alert("Sorry there was a problem with your request.");
+    });
+}); 
+
+</script>
+
+</body>
+</html>
+ 

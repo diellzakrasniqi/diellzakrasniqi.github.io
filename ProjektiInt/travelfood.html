@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+
+<html manifest="demo.appcache">
+    <head>
+       
+        <title>Food and Travel</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       <link rel="stylesheet" href="travelfood.css" type="text/css">
+ 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+/* Perdorimi i jQuery duke perdorur selektorin tr:odd per ngjyrosjen e prapavijes te rreshtave tek permes metodes css()*/
+$(document).ready(function(){
+    $("tr:odd").css("background-color", "#ffe6cc");
+});
+</script>
+        <script> 
+		/* Perdorimi i jQuery duke perdorur  metoden slideToggle() duke perdorur parametrin speed ,kjo metod qendron ne mes metodes slideDown() dhe slideUp()*/
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+    });
+});
+</script>
+
+        <style>
+            #div1{position:Relative;
+margin-left:auto;
+margin-bottom:-50px;
+            }
+            .permbajtja1 {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.btn1:hover {background-color: white;}
+
+.btn1:active {
+  background-color: #ffffe6;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+#show,#hide{border-radius:20px;
+padding:10px;}
+            </style>
+    </head>
+    <body>
+       
+    <div id="div1">
+
+<div class="navbar">
+
+  <a href="homepage.html">Home</a>
+  <div class="dropdown">
+    <button class="dropbtn">Topics
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+		<a href="technology.html">Technology</a>
+
+      <a href="sportculture.html">Sport and Culture</a>
+      <a href="psikologji.html">Psychology</a>
+    </div>
+  </div> 
+   <a href="contact.html">Contact</a>
+    <a href="aboutus.html">About us</a>
+	<div class="dropdown">
+    <button class="dropbtn">Other
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+              <a href="fashion.html">Fashion</a>
+    </div>
+  </div> 
+      <img src="travelfood3.jpg" alt="Travel Food" width="200" height="200" style="postion:Relative;float:right;margin-top:-30px;"/>
+
+</div></div>
+<img src="travelfood2.jpg" alt="Travel Food" width="200" height="200" style="postion:Relative;margin-top:-150px;"/>
+<div class="permbajtja1">
+  <img src="travel2.jpg" alt="Travel Sea" style="width:100%;height:400px">
+  <div class="centered"><h1>Adventure starts here…</h1>
+      Don’t fancy a total-relaxation beach break for your next holiday? 
+      Then try your hand at horse trekking, kayaking, yoga, painting and more. 
+      All are guaranteed to exercise mind, body and soul, combined with an idyllic
+      environment, says Imogen Lepere.
+      <p><button type="button"><a style="text-decoration:none;" href="#article1">Read More</a></button>
+      </p> 
+</div>
+</div><br>
+<div class="permbajtja2">
+  <img src="travel3.jpg" alt="Travel" style="width:100%;">
+  <div class="content1">
+    <p>Whether you’re just passing through or making a weekend of it, we give you the 48-hour lowdown on cities across the globe. What to see, what to do, what not to miss.</p>
+  </div>
+</div>
+<div class="permbajtja2">
+  <img src="travel4.jpg" alt="Travel" style="width:100%;">
+  <div class="content1">
+    <p>
+Wave goodbye to the mainland and discover unspoilt treasures, good food and kids’ activities galore on one of these European islands, says Imogen Lepere</p>
+  </div>
+</div>
+<div class="permbajtja2">
+  <img src="travel5.jpg" alt="Travel" style="width:100%;">
+  <div class="content1">
+    <p>
+See these destinations at their best by planning your family fun by season.
+Try tulips in spring, pick summer fruits in the UK, dive in the autumn and embrace winter snow.</p>
+  </div>
+</div>
+
+
+
+
+<div id="article1" >
+    <header><h1 align="center" >Countries primed to capture travellers' imagination</h1></header><br>
+    <article style="font-family:monospace;font-size:17px;">
+          
+        <span style="color:Blue;">Sri Lanka</span> is decidedly having its moment in the equatorial sun
+            
+        and change is coming swiftly. Already notable to intrepid travellers
+        for its mix of religions and cultures, its timeless temples, its rich
+        and accessible wildlife, its growing surf scene and its people who defy
+        all odds by their welcome and friendliness after decades of civil conflict, 
+        this is a country revived. There’s now more than ever for families, adrenaline 
+        junkies, eco-tourists, wellness seekers and foodies of all budgets. Even the north 
+        and east, including areas previously off limits, difficult to reach or lacking in
+        services, deliver new discoveries.
+    </article><br>
+    <button class="btn1" style="padding:10px;" onclick="myFunction()">Top things to do in Sri Lanka</button>
+    
+   
+
+<div id="myDIV" style="display:none">
+            <img src="travel6.jpg" alt="Gal Vihara" style="float:right;"/>
+
+    <h2>Gal Vihara</h2>
+
+    This is a group of beautiful Buddha images that probably marks
+    the high point of Sinhalese rock carving. They are part of Parakramabahu I’s 
+    northern monastery. The Gal Vihara consists of four separate images, all cut
+    from one long slab of granite. At one time, each was enshrined within a separate enclosure.
+    The standing Buddha is 7m tall and is said to be the finest of the series. 
+    The unusual crossed position of the arms and sorrowful facial expression led
+    to the theory that it was an image of the Buddha’s disciple Ananda, grieving 
+    for his master’s departure for nirvana, since the reclining image is next to it. 
+                <img src="travel7.jpg" alt="Abhayagiri Dagoba" style="float:right;"/>
+
+    <h2>Abhayagiri Dagoba</h2>
+    Dating back to the 1st century BC, this colossal dagoba was the ceremonial
+    focus of the 5000-strong Abhayagiri Monastery. Originally over 100m high, 
+    it was one of the greatest structures in the ancient world, its scale only matched by 
+    the pyramids of Giza (and nearby Jetavanarama). 
+        
+</div>
+<script>
+/* Perdorimi i nje JS Dom ,permes te cilit kur klikojme ne butonin e specifikuar,Nese elementi <div> eshte display:none athere ai do te paraqitet, ose anasjelltas*/
+function myFunction() {
+    var x = document.getElementById("myDIV");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+</div><br>
+<div>
+        <article style="font-family:monospace;font-size:17px;">
+
+ <span style="color:Blue;">Germany</span> 
+ has long been a powerhouse of innovation and has bestowed upon the world the printing press,
+ the automobile, the aspirin and other milestones of invention. And 100 years ago, a little 
+ school in the Thuringian countryside kick-started an aesthetic movement so globally influential 
+ that its reverberations are still felt today: the Bauhaus. 
+ Join the year-long birthday party of this midwife of modernism that was founded in Weimar in 1919, flourished in Dessau and was quashed by the Nazis in Berlin in 1933.
+        </article>
+    <p><button class="btn1" style="padding:10px" onclick="myFunction2()">More..</button></p>
+    <div id="myDIV2"><h3>Top things to do in Germany</h3> 
+
+
+<script>
+/* Perdorimi inje funksioni i cili si rezultat kthen nje tekst nese teksti i specifikuar ne div eshte i njejte me tekstin qe ne e specifikojm,ne te kunderten
+kthen si rezultat tekstin e njejt si te DIV*/
+function myFunction2() {
+    var y = document.getElementById("myDIV2");
+    if (y.innerHTML === "<h3>Top things to do in Germany</h3>") {
+        y.innerHTML = "<img  style='float:right' title=' Pregamonmuseum' src='travel8.jpg'/><h2>Pergamonmuseum</h2>Opening\n\
+ a fascinating window on to the ancient world, this palatial three-wing complex unites a rich feast \n\
+of classical sculpture and monumental architecture from Greece, Rome, Babylon and the Middle East,\n\
+including the radiant-blue Ishtar Gate from Babylon, the Roman Market Gate of Miletus \n\
+and the Caliph's Palace of Mshatta.<br>\n\
+<img src='travel9.jpg' title='Kölner Dom' style='float:left;'/><h2>Kölner Dom</h2>Cologne’s geographical\n\
+ and spiritual heart – and its single-biggest tourist draw – is the magnificent Kölner Dom.\n\
+ With its soaring twin spires, this is the Mt Everest of cathedrals, jam-packed with art and\n\
+ treasures. For an exercise fix, climb the 533 steps up the Dom’s south tower to the base of \n\
+the steeple that dwarfed all buildings in Europe until Gustave Eiffel built a certain tower in \n\
+Paris. The Domforum visitor centre is a good source of info and tickets.";
+    } 
+	else {
+        y.innerHTML = "<h3>Top things to do in Germany</h3>";
+    }
+}
+</script>
+    </div>
+        <div>
+            <button id="show">Show facts </button>
+
+<button id="hide">Hide facts </button>
+
+        <ul id="para1" style="display:none;">
+            <li>Germany has a population of 81 million people.</li>
+            <li>Germany is a member of the European Union.</li>
+            <li>One-third of Germany is still covered in forests and woodlands. </li>
+            <li>65% of the highways in Germany (Autobahn) have no speed limit.</li>
+            <li>University is free for everyone (even non-Germans).</li>
+            <li>There are over 2100 castles in Germany.</li>
+            <li>There are over 1,500 different beers in Germany.</li>
+        </ul>
+<script>
+    //Perdorimi i jQuery per realizimin e funksionalitetit i cili shfaq dhe largon
+    //nje list nga permbajtja e faqes dhe shfaq nje dritare per lajmrim.ne fillim 
+    //shfaq/largon listen pastaj paraqet paralajmrimin
+$(document).ready(function(){
+    $("#show").click(function(){
+        $("#para1").show("slow",function(){;
+        alert("The facts are now shown");
+    });
+});
+$("#hide").click(function(){
+        $("#para1").hide("slow",function(){;
+        alert("The facts are now hidden");
+    });
+})
+});
+
+</script>
+        </div>   <br/>  
+        <div id="flip"><h4><i>Most visited destinations by international tourist arrivals</i></h4></div>
+    <div id="panel">
+        In 2017, there were 1.323 billion international tourist arrivals worldwide, with a growth of 6.8% as compared to 2016.The top 10 international tourism destinations in 2017 were (2017 numbers are preliminary):
+        <br><br>
+        <table border="1" style="margin:auto;" cellpadding='10'>
+            <caption style="text-align:center;caption-side:bottom">Table 1.</caption>
+            <tr><th>Rank</th>
+                <th>Destination</th>
+                <th>International tourist arrivals (2017)</th>
+                <th>International tourist arrivals (2016)</th>
+            <th>Change(2016) to (2017) (%)</th>
+            
+            </tr>
+            <tr><td>1</td>
+                <td><img src="france.png">France</td>
+                <td>86.9 million</td>
+                <td>82.7 million</td>
+                <td>5.1</td>
+                
+            </tr>
+            <tr><td>2</td>
+                <td><img src="spain.png">Spain</td>
+                <td>81.8 million</td>
+                <td>75.3 million</td>
+                <td>8.6</td>
+            </tr>
+            <tr><td>3</td>
+                <td><img src="unitedstates.png">US</td>
+                <td>76.9 million</td>
+                <td>76.4 million</td>
+                <td>0.7</td>
+            </tr>
+                    
+            <tr>
+                <td>4</td>
+                <td><img src="china.png">China</td>
+                <td>60.7 million</td>
+                <td>59.3 million</td>
+                <td>2.5</td>
+            </tr>
+              <tr>
+                <td>5</td>
+                <td><img src="italy.png">Italy</td>
+                <td>58.3 million</td>
+                <td>52.4 million</td>
+                <td>11.2</td>
+            </tr>
+            
+  
+            
+        </table>
+    </div></div>
+<br><br>
+    <div style="width:1000px;margin:auto;">
+        <!-- Perdorimi i iframe dhe video youtube-->
+        <q id="quote">Travel isn’t always pretty. It isn’t always comfortable. Sometimes it hurts, it even breaks your heart. But that’s okay. The journey changes you; it should change you. It leaves marks on your memory, on your consciousness, on your heart, and on your body. You take something with you. Hopefully, you leave something good behind.</q> – Anthony Bourdain
+        <br><br><iframe height="561px" width="1000px" src="travelplaces.jpg" name="iframe_a"></iframe>
+      
+
+<p align="center"><a href="https://www.youtube.com/embed/OHAWwaYu2H0" target="iframe_a">Video1: Top 10 Most Beautiful Places In The World
+</a></p>
+
+    </div>
+      
+<div style="width:1000px;margin:Auto;">
+        <header>
+            <h2 align="center">The 4 Best Countries in the World for Food</h2><br>
+        </header> 
+        <article style="font-family:monospace;font-size:17px;">
+            
+            Your mom cooks the best food ever in the universe. We know that. But if one day you want to try food which (would never be better of course) would be different from your mother’s, then this article is for you.
+
+When you are out of country, you need some hints not to get lost in the variety of tastes and flavors. We will give you a list of stories not only about best destinations for food, but also about how to understand what is on your plate. What are the must-eats and must-drinks? And what you should avoid not to get into awkward situations…
+
+Which are the Best Countries in the World for Food? Let’s start! Don’t get overexcited though, this list is not a rating- it’s just a collection of delicious destinations!</article>
+       <div class="row">
+  <div class="column">
+	 <img src="vietnam.bmp" title="Vietnam Food" alt="Vietnam Food" style="width:100%">
+	<div style="border:1px solid #FFDEAD;max-width:500px;margin-left:0px;">
+        The main ingredients of Vietnamese food include shrimp paste, fish sauce, rice,
+        herbs, Thai basil, fruits and vegetables. But at the same time, unlike 
+        other Asian countries, Vietnam has one of the healthiest foods in this region.<br>
+        <i class="material-icons">&#xe56c;</i><b>Goi cuon</b> – spring rolls stuffed with coriander, greens, minced pork, shrimp or crab.
+        <br> <i class="material-icons">&#xe56c;</i><b> Banh mi</b> – sandwich with vegetables, omelette and various different fillings.
+        <br> <i class="glyphicon glyphicon-glass"></i><b>Must-Drink in Vietnam:</b> 
+         Jasmine tea, Bia Hoi – local beer, strong iced coffee, lemon iced tea.
+    </div>
+	
+  </div>
+  <div class="column">
+    <img src="greece.bmp" title="Greece Food" alt="Greece Food" style="width:100%">
+	 <div style="border:1px solid #FFDEAD;max-width:500px;margin-left:0">
+        There are many things in general you can try, from salads to hot dishes, 
+        from sweets to soups. But if you want something traditional, cheap and fast – 
+        it`s definitely souvlaki. The iconic dish of Greece is a fast food that you 
+        usually can find anywhere on the streets.<br>
+        <i class="material-icons">&#xe56c;</i><b>Greak Salad</b> 
+        – it is called just «salad» in Greece. Be aware of this when you order in restaurant.
+        <br> <i class="material-icons">&#xe56c;</i><b>Souvlaki </b> 
+        – "Little skewers" in Greek: it`s basically little pieces of marinated pork, fried on grill. 
+        <br> <i class="glyphicon glyphicon-glass"></i><b>Must-Drink in Greece:</b> ouzo, tsipouro
+    </div>
+  </div>
+
+</div>
+
+     <div class="row">
+  <div class="column">
+    <img src="pakistan.bmp" title="Pakistan Food" alt="Pakistan Food" style="width:100%">
+<div style="border:1px solid #FFDEAD;max-width:500px;margin-left:0px">
+       Pakistanis, being Muslims, don’t consume pork and alcohol, they rather concentrate 
+       on beef, chicken, fish and vegetables. They also use a lot of flavors, you will 
+       see these in majority of dishes: chilli powder, ginger, curry, coriander, paprika,
+       cinnamon and garlic.
+       <br>
+        <i class="material-icons">&#xe56c;</i><b>Shahi Tukra</b> – a sweet dish made with sliced bread, cream, sugar, milk and saffron.
+        <br> <i class="material-icons">&#xe56c;</i><b>Chicken Tandoori</b> – chicken marinated and roasted in tandoor
+        <br> <i class="glyphicon glyphicon-glass"></i><b>Must-Drink in Pakista:</b>lassi (yogurt drink)<br>
+        <i style="font-size:20px;color:red;" class="fa">&#xf071;</i><b>Remember</b>: alcohol is prohibited here!
+
+    </div>
+  </div>
+  <div class="column">
+      <img src="italy.bmp" title="Italy Food" alt="Italy Food" style="width:100%">
+
+  <div style="border:1px solid #FFDEAD;max-width:500px;margin-left:0px;">
+        It’s hard to speak about Italian food, it’s better to enjoy it.
+        The traditional colors of Italian cuisine – red, green and yellow 
+        always create a great mixture of flavor and taste.<br>
+        <i class="material-icons">&#xe56c;</i><b>Pizza</b>-Margherita, Quattro Formaggi, Speck e Mascarpone & many more…
+        <br> <i class="material-icons">&#xe56c;</i><b>Pasta</b> -choose Carbonara, Pesto, Cacio e pepe and Amatriciana: these are the best options.
+        <br> <i class="glyphicon glyphicon-glass"></i><b>Must-Drink in Italy:</b> 
+         Red Wine, White wine, Sparkling wine (Franciacorta & Prosecco), limoncello, San Pellegrino water.
+    </div>
+   
+  </div>
+
+</div>
+     
+    </div>
+<div width="800px" style="margin-left:50px;" >
+    
+    <h3 align="center" style="background-image:url('fruits.jpg');color:white">Fun Healthy Food Facts</h3><br>
+	
+    <p id="paragrafi1">Food is the best. So are facts about the food we love. The way we see it,
+        the more you know about healthy food, the more you tend to like it. So get the facts.
+        And tell your friends about them.</p>
+    <br><br>
+
+    <ol id="ordlist">
+    <li>Broccoli contains twice the vitamin C of an <span id="demo1"></span>.</li>
+    <li>Apples are made of <span id="demo4"></span>% air, which is why they float.</li>
+    <li><span id="demo2"></span> has highest protein content of all fruit.</li>
+    <li>Cabbage is 91% water.</li>
+    <li><span id="demo3"></span> are a member of the rose family.</li>
+    <li>Lemons contain more sugar than strawberries.</li>
+    <li>Honey is the only edible food that never goes bad.</li>
+    <li>Eggplants are fruits and classified as berries.</li>
+    <li>Ginger can reduce exercise-induced muscle pain by <span id="demo6"></span>%.</li>
+    <li id="demo5"></li>
+    </ol>
+	
+
+    <script>
+	/* Perdorimi i disa metodave te JS array sic jane pop(),shift(),slice()*/
+    var fruits = ["Avocado","Banana","Cherries", "Mango", "Apple", "Orange"];
+document.getElementById("demo1").innerHTML = fruits.pop();
+document.getElementById("demo2").innerHTML = fruits.shift();
+document.getElementById("demo3").innerHTML = fruits.slice(1,2);</script>
+<script>
+/* Perdorimi i JS Dom per stilimin e madhesise dhe stilit te fontit*/
+document.getElementById("paragrafi1").style.fontSize = "larger";
+document.getElementById("paragrafi1").style.fontStyle = "italic";
+</script>
+</script>
+<!-- perdorimi i dy JS funksioni -->
+<script>
+function myFunc(a,b)
+{
+return a*b;
+}
+document.getElementById("demo4").innerHTML=myFunc(5,5);
+</script>
+<script>
+    function myFunc()
+    {
+        document.getElementById("demo5").innerHTML="1% of Americans are vegetarians.";
+    }
+    myFunc();
+    </script>
+    <!--Perdorimi i function() constructor -->
+    <script>
+     var myfunc=new Function("a","b","return a*b");
+     document.getElementById("demo6").innerHTML=myFunc(5,5);
+        </script>
+<img id="cherry" src="cherry.jpg" width="200" height="200" style="margin-left:800px;margin-top:-220px">
+</div>
+<div>
+Type 'Hamburger','McDonald','Soda','French fries' on the input field to read interesting fact about them!
+<input type="text" id="myinput">
+<button onclick="func()">Read</button>
+<p id="demo"></p>
+<script>
+/* Perdorimi i JS switch*/
+function func()
+{
+var txt=document.getElementById("myinput").value;
+var text;
+switch(txt)
+{
+case "Hamburger":
+ text="One fast food hamburger contains meat from up to 100 different cows.";
+break;
+case "McDonald": 
+text="McDonald’s is visited by 90 percent of American children on a monthly basis.";
+break;
+case "Soda":
+text="Fountain soda machines contain fecal bacteria.";
+break;
+case "French Fries": 
+text="French fries are the most popular type of fast food in America. ";
+break;
+default: text="Sorry ,you can read a fact about this food in Google!";
+}
+document.getElementById("demo").innerHTML=text;
+}
+</script>
+</div>
+<a id="linku" href="homepage.html" title="Back to Homepage" class="previous round">&#8249;</a>
+
+
+
+    </body>
+</html>

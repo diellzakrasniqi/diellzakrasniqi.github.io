@@ -1,0 +1,624 @@
+<!DOCTYPE>
+<html>
+<head>        <title>Sport and Culture</title>
+
+<link rel="stylesheet" href="sportculture.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+/* Perdorimi i jQuery duke perdorur metoden slideToggle()*/ 
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+    });
+});
+</script>
+
+<style>
+#panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-image:radial-gradient(circle,cornsilk ,khaki,LightGoldenRodYellow );
+
+    border: solid 1px #c3c3c3;
+}
+
+#panel {
+    padding: 50px;
+    display: none;
+
+}
+
+.navbar {
+    overflow: hidden;
+	margin-left:300px;
+	font-family:oblique;
+	/*width:500px;*/
+	
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: green;
+    text-align: center;
+    padding: 14px 30px;
+    text-decoration: none;
+
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: green;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+	
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: white;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left
+
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+#div1{
+height:100px;
+background-image:url(sport3.png);
+box-sizing:border-box;
+
+}
+.permbajtja {
+    position: relative;
+    text-align: center;
+    color: white;
+	margin-top:30px;
+}
+
+.mes {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#fig1{ border-radius:10px;
+}
+/* Perdorimi i multiple columns me property e tij*/
+#multiple{
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    column-count: 3;
+    column-gap: 40px;
+    -webkit-column-rule: 3px solid lightblue; /* Chrome, Safari, Opera */
+    column-rule: 3px solid lightblue;
+	font-family:monospace;
+}
+
+.sport {
+  /*Perdorimi i transition */
+    -webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* Safari */
+    transition: width 2s, height 2s, transform 2s;
+}
+/*Perdorimi i transform */
+.sport:hover {
+    width: 200px;
+    height: 200px;
+    -webkit-transform: rotate(360deg); /* Safari */
+    transform: rotate(360deg);
+}
+
+
+.permbajtja1 {
+  position: relative;
+  width: 50%;
+}
+
+.atlets {
+  display: block;
+  width: 40%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color:white;
+  overflow: hidden;
+  width: 40%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.permbajtja1:hover .overlay {
+  height: 100%;
+}
+
+.text {
+  color: black;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#div5{
+margin-left:950px;
+margin-top:-450px;}
+
+#video1{ border-radius:10px;}
+<!--PERDORIMI I LINEAR-GRADIENT -->
+#div9 {
+    
+     background-image: linear-gradient(to right, rgb(255, 204, 204), rgb(255, 204, 102));
+}
+#resiz
+{
+
+    border: 2px solid;
+    padding: 20px; 
+    width: 500px;
+    resize: horizontal;
+    overflow: auto;
+}
+.butoni6{border-radius:8px;
+padding:5px;
+background-color:hsl(30, 100%, 80%);}
+</style>
+</head>
+<body>
+
+
+<div id="div1">
+<div class="navbar">
+  <a href="homepage.html">Home</a>
+  <div class="dropdown">
+    <button class="dropbtn">Topics
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+    	<a href="technology.html">Technology</a>
+
+      <a href="psikologji.html">Psychology</a>
+    </div>
+  </div> 
+   <a href="contact.html">Contact</a>
+    <a href="aboutus.html">About us</a>
+	<div class="dropdown">
+    <button class="dropbtn">Other
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+		  <a href="fashion.html">Fashion</a>
+
+      <a href="travelfood.html">Travel and Food</a>
+    </div>
+  </div> 
+</div></div>
+
+<div class="permbajtja">
+  <img src="sportculture1.jpg" id="fig1" alt="Sport and Culture" style="width:90%;">
+
+  <div class="mes"><h1 style="color:White;">Sport and Culture</h1>
+  <p style="color:white;font-size:20px;">Sport and culture have intrinsic value to people 
+  and places, promoting health and well-being. However, their economic impacts are limited.<p>
+  </div>
+</div>
+<div id="div2" >
+<h1 style="Text-align:center;color: #6666ff;">Why sport and culture?</h1>
+<div id="multiple">In recent decades a great deal of attention has been paid to cities’ sport and cultural offerings. The prestige of hosting an international 
+sporting event or building an architecturally stunning art gallery is naturally attractive to city leaders. Great public spectacles like the 2012 
+Olympics are often hugely popular – at the time.
+On the other hand, the cost and delivery challenges for such mega-events and major facilities often make these projects complex, 
+expensive and controversial. For example, London 2012’s budget famously doubled from the initial bid.
+ variety of economic and social gains are claimed by proponents of sports and culture. For example, The British Olympic Association’s evidence to Parliament supporting London’s 2012 Olympics set out a huge range of potential benefits.</div>
+</div>
+<div id="div3" style="margin-left:80px;">
+<img src="sport4.jpg" class="sport" alt="soccer ball" >
+<img src="sport5.jpg" class="sport" alt="basket ball">
+<img src="sport6.jpg" class="sport" alt="rugby">
+<img src="sport7.jpg" class="sport"  alt="golf ball">
+<img src="sport8.jpg" class="sport" alt="tennis ball">
+</div><hr><br><Br>
+<div id="div4"><h2 id="h2" style="margin-left:100px;color: #6666ff;">The greatest-ever athlete across all sports </h2><br>
+<div class="permbajtja1" style="margin-left:100px">
+  <img src="atl1.jpg" alt="Usain Bolt" class="atlets">
+  <div class="overlay">
+    <div class="text"><p id="demo"></p> </div>
+	<p id="demo"></p>
+
+<script>
+
+//Perdorimi i metodes brenda konstruktorit
+function Sportist(first, last, month, year) {
+    this.firstName = first;
+    this.lastName = last;
+    this.month=month;
+    this.year = year;
+    this.name = function() {
+        return this.firstName + " " + this.lastName
+    };
+}
+
+var atlet = new Sportist("Usain", "Bolt", "August",1986 );
+
+
+document.getElementById("demo").innerHTML =
+ atlet.name()+ " born on 21 "+atlet.month+" "+atlet.year+" is a Jamaican retired sprinter and world record holder in the 100 metres, 200 metres and 4 × 100 metres relay.";
+
+</script>
+  </div>
+</div>
+<div class="permbajtja1" style="margin-left:370px;margin-top:-265px;">
+  <img src="atl2.jpg" alt="Michael Jordan" class="atlets">
+  <div class="overlay">
+    <div class="text">
+	<p>Michael Jordan is an American former professional basketball player.
+	He played 15 seasons in the NBA for the Chicago Bulls and Washington Wizards.</p></div>
+  </div>
+</div>
+<div class="permbajtja1" style="margin-left:640px;margin-top:-265px;">
+  <img src="atl3.jpg" alt="Mia Hamm" class="atlets">
+  <div class="overlay">
+    <div class="text">Mariel Margaret Hamm is an American retired professional soccer player,two-time Olympic gold medalist,and two-time FIFA Women's World Cup champion.</div>
+  </div>
+</div>
+<div class="permbajtja1" style="margin-left:100px">
+  <img src="atl4.jpg" alt="Michael Phelps" class="atlets">
+  <div class="overlay">
+    <div class="text">Michael Fred Phelps II is an American retired competitive swimmer and the most successful and most decorated Olympian of all time,with a total of 28 medals.</div>
+  </div>
+</div>
+<div class="permbajtja1" style="margin-left:370px;margin-top:-265px;">
+  <img src="atl5.jpg" alt="Serena Williams" class="atlets">
+  <div class="overlay">
+    <div class="text">Serena Williams is an American professional tennis player. The WTA ranked her world No.1 in singles on eight separate occasions between 2002 and 2017. </div>
+  </div>
+</div>
+<div class="permbajtja1" style="margin-left:640px;margin-top:-265px;">
+  <img src="atl6.jpeg" alt="Mohammed Ali" class="atlets">
+  <div class="overlay">
+    <div class="text">Muhammad Ali was an American professional boxer,activist,and philanthropist.He is widely regarded as one of the 
+	most significant and celebrated sports figures of the 20th century.</div>
+  </div>
+</div>
+</div>
+<div id="div5">
+<video id="video1" controls width="300px" height="300px">
+<source src="sportmotiv.mp4">
+</video>
+<p style="font-size:14px;font-family:monospace;"><b>Video1</b>.Challenge Yourself-Best Sports Motivational Video</p>
+</div><br><br><br><br><br>
+<div style="width:400px;margin:auto"><h1>Lets play a quiz!</h1></div>
+<div class="permbajtja2">
+
+  <div class="quiz">
+
+    <div class="quiz-question">When did Messi won  the  FIFA Club World Cup Final ?</div>
+
+    <label class="quiz-answer">
+      <input type="radio" name="question1" id="answer1">
+      <div class="highlight"></div>
+      <div class="circle"></div>
+      <p>2008</p>
+      <span class="feedback">Try again!</span>
+    </label>
+
+    <label class="quiz-answer correct">
+      <input type="radio" name="question1" id="answer1">
+      <div class="highlight"></div>
+      <div class="circle"></div>
+      <p>2015</p>
+      <span class="feedback">That's right!</span>
+    </label>
+
+    <label class="quiz-answer">
+      <input type="radio" name="question1" id="answer1">
+      <div class="highlight"></div>
+      <div class="circle"></div>
+      <p>2012</p>
+      <span class="feedback">Sorry!</span>
+    </label>
+
+    <label class="quiz-answer">
+      <input type="radio" name="question1" id="answer1">
+      <div class="highlight"></div>
+      <div class="circle"></div>
+      <p>2014</p>
+      <span class="feedback">Not quite!</span>
+    </label>
+
+  </div>
+</div>
+<div class="permbajtja2" id="div6">
+
+  <div class="quiz">
+
+    <div class="quiz-question">Who was  the only player to win three World Cups?
+</div>
+
+    <label class="quiz-answer correct">
+      <input type="radio" name="question1" id="answer1">
+      <div class="highlight"></div>
+      <div class="circle"></div>
+      <p>Pelé</p>
+      <span class="feedback">That's right!</span>
+    </label>
+
+    <label class="quiz-answer ">
+      <input type="radio" name="question1" id="answer1">
+      <div class="highlight"></div>
+      <div class="circle"></div>
+      <p>Michel Platini</p>
+      <span class="feedback">Try again!</span>
+    </label>
+
+    <label class="quiz-answer">
+      <input type="radio" name="question1" id="answer1">
+      <div class="highlight"></div>
+      <div class="circle"></div>
+      <p>Zinedine Zidane</p>
+      <span class="feedback">Sorry!</span>
+    </label>
+
+    <label class="quiz-answer">
+      <input type="radio" name="question1" id="answer1">
+      <div class="highlight"></div>
+      <div class="circle"></div>
+      <p>David Beckham</p>
+      <span class="feedback">Not quite!</span>
+    </label>
+
+  </div>
+</div>
+<div class="permbajtja2" id="div7">
+
+  <div class="quiz">
+
+    <div class="quiz-question">Who was  the youngest player to be drafted by the NBA number 1?</div>
+
+    <label class="quiz-answer">
+      <input type="radio" name="question1" id="answer1">
+      <div class="highlight"></div>
+      <div class="circle"></div>
+      <p>Reggie Miller</p>
+      <span class="feedback">Try again!</span>
+    </label>
+
+    <label class="quiz-answer ">
+      <input type="radio" name="question1" id="answer1">
+      <div class="highlight"></div>
+      <div class="circle"></div>
+      <p>Dirk Nowitzki</p>
+      <span class="feedback">Not quite!</span>
+    </label>
+
+    <label class="quiz-answer">
+      <input type="radio" name="question1" id="answer1">
+      <div class="highlight"></div>
+      <div class="circle"></div>
+      <p>Kevin Durant</p>
+      <span class="feedback">Sorry!</span>
+    </label>
+
+    <label class="quiz-answer correct">
+      <input type="radio" name="question1" id="answer1">
+      <div class="highlight"></div>
+      <div class="circle"></div>
+      <p>LeBron James</p>
+      <span class="feedback">That's right!</span>
+    </label>
+
+  </div>
+</div><hr>
+
+
+<div id="flip">Click to read some interesting facts about sport players.</div>
+<div id="panel">
+<h3>CHRISTIANO RONALDO</h3>
+Back to his early days, when Cristiano Ronaldo was a kid, he once hit a teacher with a chair because she made fun of his Madeiran accent.  
+<h3>NOVAK DJOKOVIC</h3> 
+After winning the French Open in 2016, he became the only Men’s Singles Tennis player after Lord Laver to win a “Career Slam” in history.
+<h3>LIONEL MESSI</h3>
+Messi's first contract with Barcelona was detailed out on a paper napkin! FC Barcelona sporting director Carles Rexach was so impressed with Messi's skills that he wanted to make a contract immediately and there was no paper available at that time
+<H3>FRANK LAMPARD</H3> 
+He has an IQ of 150, which puts him in the top 0.5% of the world population and at genius level.
+<h3>FLOYD MAYWEATHER</h3>
+In 1993, Floyd’s father was arrested for possession and trafficking cocaine. His mother had addiction issues too, so his family life was not exactly easy.
+</div>
+
+
+
+<div id="div8">
+<article>
+<h2 style="Text-align:center" id="convertUpper">what is culture?</h2>
+<script>
+/*Perdorimi i metodes toUpperCase() per konvertimin e stringut ne shkronja te medha! */
+var x=document.getElementById("convertUpper").innerHTML;
+var str=x.toUpperCase();
+document.getElementById("convertUpper").innerHTML=str;
+</script>
+<div style="width:1000px;margin:Auto;">
+<pre>
+Culture is the characteristics and knowledge of a particular group of people, encompassing language, religion, cuisine, social habits, music and arts.
+Culture encompasses religion, food, what we wear, how we wear it, our language, marriage, music, what we believe is right or wrong, how we sit at the 
+table, how we greet visitors, how we behave with loved ones, and a million other things," Cristina De Rossi, an anthropologist at Barnet 
+and Southgate College in <span id="replace1">New York</span>, told Live Science.
+The word "culture" derives from a French term, which in turn derives from the Latin "colere," which means to tend to the earth and grow, or cultivation 
+and nurture. "It shares its etymology with a number of other words related to actively fostering growth," De Rossi said.
+<script>
+/*Perdorimi i metodes replace() duke perdorur regular expression /i flag per case insensitive */
+var x=document.getElementById("replace1").innerHTML;
+var str=x.replace(/NEW YORK/i,"London");
+document.getElementById("replace1").innerHTML=str;
+</script>
+</pre>
+</article>
+</div>
+
+
+<img id="fytyra" src="culture1.jpg" alt="fytyra" width="250" height="280" style="margin-left:400;" />
+<p><b></b> </p>
+<canvas id="perfytyra" width="250" height="280"  style="border:1px solid black;margin-left:740px;margin-top:-300px;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<p><button style="padding:8px;margin-left:650px;background-color:#c65353"onclick="perfytyra()">Try this!</button></p>
+<!-- Perdorimi i canvas image -->
+<script>
+function perfytyra(){
+	var c=document.getElementById("perfytyra");
+	var ctx=c.getContext("2d");
+	var img=document.getElementById("fytyra");
+	ctx.drawImage(img,0,0);
+}
+</script>
+
+<div id="div9"style="font-size:20px;border:1px solid #c65353;border-radius:10px;">
+<h3><mark>Western culture</mark></h3>
+<img src="culture2.jpeg" width="300px" height="300px;" style="float:right" alt="western culture">
+
+The term "Western culture" has come to define the culture of European countries as well as those that have been heavily influenced by
+European immigration, such as the United States, according to Khan University. Western culture has its roots in the Classical Period 
+of the Greco-Roman era and the rise of Christianity in the 14th century.
+
+Other drivers of Western culture include Latin, Celtic, Germanic and Hellenic ethnic and linguistic groups.
+Today, the influences of Western culture can be seen in almost every country in the world.<br>
+<h3><mark>Latin culture</mark></h3>
+
+ Many of the Spanish-speaking nations are considered part of the Latin culture, while the geographic region is widespread.
+ Latin America is typically defined as those parts of the Central America, South America and Mexico where Spanish or Portuguese 
+ are the dominant languages. Originally, the term "Latin America" was used by French geographers to differentiate between Anglo and Romance (Latin-based) 
+ languages, according to the University of Texas. While Spain and Portugal are on the European continent, they are considered the key influencers of what
+ is known as Latin culture, which denotes people using languages derived from Latin, also known as Romance languages.
+ <img src="culture4.jpg" width="300px" height="200px;" style="float:right" alt="latin culture">
+
+ <p>National holidays:</p>
+<p id="renditjaVektor"></p>
+<script>
+/*Perodrimi i loop per paraqitjen e te gjitha elementeve te vektorit ne forme te listes se parenditur */
+var fruits = ["New Year's Day", "Good Friday", "Easter", "Portugal Day","Christmas Day"];
+var txt="<ul>";
+for(var i=0;i<fruits.length;i++)
+
+{
+
+txt+="<li>"+fruits[i]+"</li>";
+}
+txt+="</ul>";
+document.getElementById("renditjaVektor").innerHTML=txt;
+</script>
+
+
+
+<h3><mark>African culture</mark></h3>
+
+The continent of Africa is essential to all cultures. Human life originated on this continent and began to migrate to
+ other areas of the world around 60,000 years ago, according to the Natural History Museum in London. Other researchers, 
+ like those from Estonian Biocentre in Tartu, believe that the first migration may have been much earlier, as early as 120,000 years ago. 
+ Researchers come to these conclusions by studying human genomes from various cultures to trace their DNA to common ancestors. 
+ Fossil records also factor into some of these theories. <br><br><br>
+<i style="Color:#800000"> HERE ARE A FEW INTERESTING FACTS THAT REALLY HELP MAKE OUR WORLD A FUND PLACE TO LIVE</i>
+<!--PERDORIMI I LISTES UNORDERED-->
+<ul>
+<li>There are over 6,000 languages spoken in the world today, many of which are spoken by fewer than a few hundred people. The top 10 or <span id="numer"></span> languages however make up the vast majority of all of the speakers in the world.</li>
+<script><!-- PERDORIMI I METODES  LENGTH TEK STRINGJET -->
+var txt = "dymbedhjete1";
+document.getElementById("numer").innerHTML = txt.length;
+</script>
+<li>Mexicans celebrate New Years Eve by eating <span id="dem1"></span> grapes at the stroke of midnight. This tradition is actually fairly common among Latin American countries and dates back to their ancestors.</li>
+<li>French people have the longest life span for women, the third longest for men, and they have the fastest train in the world clocked at 357mph! If you feel the need for speed and the desire to live a long time, France may be your country.</li>
+<li>Spain had a three year civil war that killed over 500.000 people.</li>
+<li>The United States spends three times more on their military than the next 3 countries combined.</li>
+<li>Dubai is home to the tallest building in the world - <span id="building"></span>, which stands at a towering 2717 feet in height.</li>
+<!-- This example slices out a portion of a string from position -18 to position -6:-->
+<script>
+var str = "London, Burj Khalifa, York";
+var res = str.slice(-18,-6);
+document.getElementById("building").innerHTML = res;
+</script>
+<!-- PERDORIMI I JS FUNCTION DUKE E RUJTUR NE NJE VARIABEL -->
+<script>
+    var x=function(a,b)
+    { return a*b};
+    document.getElementById("dem1").innerHTML=x(4,3);
+    
+    </script>
+<li>Africa is home to anywhere from 800 to 1,500 of the worlds languages making it possibly the most linguistically diverse continent in the world.</li>
+</ul>
+<div id="Resiz" style="margin-left:400px;">
+<img src="culture5.jpg" width=150 height=150 style="float:right;" alt="World Culture" title="Culture"/>
+Top Five Countries With the Most Fascinating Cultures and Histories:
+<p style="Color:red;">China,Indi,Greece,Italy,Japan.</p>
+</div>
+<!-- PERDORIMI I SVG HTML5 -->
+<svg height="100" width="500">
+  <ellipse cx="240" cy="50" rx="220" ry="30" style="fill:#ff8c66" />
+  <ellipse cx="220" cy="50" rx="190" ry="20" style="fill:white" />
+  Sorry, your browser does not support inline SVG.
+  <text x="80" y="50" fill="black" style="font-size:12px">With only about 3,000 people the Falkland Islands
+  <tspan x="80"  y="60" > are home to approximately half-a million-sheep.</tspan></text>
+</svg>
+
+<svg width="500" height="140">
+  <rect y="20"  width="300" height="100" rx="4" ry="4" stroke=" #ff6666" fill="white" stroke-width="1"  stroke-opacity="0.4"/>
+  Sorry, your browser does not support inline SVG.  
+  <text x="5" y="50" fill="black" style="Font-size:14px" >Although for the last three years Iraq 
+  <tspan x="5" y="80">has been ranked as the least peaceful country </tspan>
+  <tspan x="5" y="110">in the world.</tspan></text>
+</svg>
+  <svg height="100" width="500" style="margin-left:800px;margin-top:-100px;">
+  <ellipse cx="240" cy="50" rx="220" ry="30" style="fill:#ff8c66" />
+  <ellipse cx="220" cy="50" rx="190" ry="20" style="fill:white" />
+  Sorry, your browser does not support inline SVG.
+  <text x="80" y="50" fill="black" style="font-size:12px">With a natural decrease in population of .8% annually between
+  <tspan x="60"  y="60" >  now and 2050 Ukraine is expected to lose around 30% of its people.</tspan></text>
+</svg
+</div>
+<div width="400" style="margin-left:300px;">
+<!--PERDORIMI I JAVASCRIPT CSS PER NDERRIM TE IMAGES -->
+
+<button class="butoni6" onclick="document.getElementById('myImage').src='michaeljordan.jpg'">First Highest-Paid Athlete of All-Time</button>
+<img src="sportquote.jpg" id="myImage" width="200" height="200"s  style="margin:0;border-radius:30px;"/>
+<button class="butoni6" onclick="document.getElementById('myImage').src='tigerwoods.jpg'">Second Highest-Paid Athlete of All-Time</button>
+
+</div>
+</div>
+
+</body>
+</html>

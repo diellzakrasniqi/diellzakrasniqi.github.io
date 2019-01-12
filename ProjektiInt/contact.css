@@ -1,0 +1,12 @@
+
+
+
+#para1 {outline-style:groove;
+outline-color:blue;
+outline-offset:1px;
+outline-width:0.5px;
+font-size:15px;}
+
+#para1::before {content:url("aboutbook.jpg");}
+#para1::first-line{font-family:monospace;
+font-size:12px;}

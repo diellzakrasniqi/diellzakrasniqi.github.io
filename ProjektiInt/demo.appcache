@@ -1,0 +1,14 @@
+CACHE MANIFEST
+#DATE 2018-12-18
+CACHE
+homepage.html
+contact1.jpg
+psiko1.jpg
+travelfood1.jpg
+sport1.png
+
+NETWORK:
+*
+
+FALLBACK:
+#static.htm

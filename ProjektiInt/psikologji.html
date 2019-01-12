@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html manifest="demo.appcache">
+<head>
+            <title>Psychology</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="Stylesheet" type="text/css" href="psikologji.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+<script> 
+/* Perdorimi i jQuery metodes slideToggle() me parametrin speed (ne kete rast vlera slow)*/
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+    });
+});
+
+</script>
+<script>
+/* Perdorimi i jQuery duke perdorur metoden fadeIn() dhe parametrin speed */
+$(document).ready(function(){
+    $("#prova").click(function(){
+        $("#para1").fadeIn();
+        $("#para2").fadeIn("slow");
+		$("#para3").fadeIn("slow");
+		$("#para4").fadeIn("slow");
+        $("#para5").fadeIn(3000);
+    });
+});
+/* Perdorimi i jQuery duke perdorur metodat hide() dhe show()*/
+$(document).ready(function(){
+    $("#hide").click(function(){
+        $("#demo").hide();
+    });
+    $("#show").click(function(){
+        $("#demo").show();
+    });
+});
+/* Perdorimi i HTML5 Drag and Drop
+1.Per te bere elementin draggable ,duhet te vendosim atributin draggable ne true,
+2.Eventi ondragover specifikon ku te behet drop dragged data*/
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+/*Metoda  dataTransfer.setData() vendos data type dhe vleren e dragged data*/
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+/* Kur dragged data te behet drop, nje event drop parqitet.Ne shembullin ne vijim,atributi ondrop e thirr nje funksion,drop(event)
+Kodi shpjegohet si ne vijim:
+Call preventDefault() to prevent the browser default handling of the data (default is open as link on drop)
+Get the dragged data with the dataTransfer.getData() method. This method will return any data that was set to the same type in the setData() method
+The dragged data is the id of the dragged element ("drag1")
+Append the dragged element into the drop element
+*/
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
+</script>
+
+<style>
+#more {display: none;}
+
+#btn1 {margin-left:10px;
+padding:5px;
+background-color:#66ff99;
+border-radius:4px;}
+ 
+#panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+
+#panel {
+    padding: 50px;
+    display: none;
+}
+
+    
+</style>
+
+
+<script>
+/* Perdorimi i jQuery per te ndryshuar ngjyren e prapavijes duke perdorur onmouseover dhe onmouseout */
+function bgChange(bg) {
+    document.body.style.background = bg;
+}
+</script>
+</head>
+<body>
+
+<div class="navbar">
+  <a href="homepage.html">Home</a>
+  <div class="subnav">
+    <button class="subnavbtn">Topics<i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">      
+	<a href="technology.html">Technology</a>
+      <a href="sportculture.html">Sport and Culture</a>
+    </div>
+	
+  </div> 
+    <a href="contact.html">Contact</a>
+	  <a href="aboutus.html">About us</a>
+
+
+  <div class="subnav">
+    <button class="subnavbtn">Other <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="fashion.html">Fashion</a>
+      <a href="travelfood.html">Travel and Food</a>
+    </div>
+  </div> 
+</div>
+	 <table style="width:50px;height:20px;margin-left:1280px;margin-top:-35px;">
+  <tr>
+    <td onmouseover="bgChange(this.style.backgroundColor)" 
+        onmouseout="bgChange('transparent')"
+        style="background-color:Khaki">
+    </td>
+    <td onmouseover="bgChange(this.style.backgroundColor)" 
+        onmouseout="bgChange('transparent')"
+        style="background-color:PaleGreen">
+    </td>
+    <td onmouseover="bgChange(this.style.backgroundColor)" 
+        onmouseout="bgChange('transparent')"
+        style="background-color:Silver">
+    </td>
+  </tr>
+</table>
+<br></br><br></br>
+<div id="div3">
+<figure >
+<img src="psiko2.jpg" id="img1" title="Quote" alt="Quote about Psychology" style="width:170px;height:170px;float:right;"/>
+</figure>
+
+
+<p><pre>
+  - Psychology is the study of the mind and behavior. Research in psychology seeks to understand and 
+  explain how people think, act, and feel. Psychologists strive to learn more about the many factors 
+  hat can impact thought and behavior, ranging from biological influences to social pressures.
+  
+  <strong><span id="var2"></span> Interesting Psychological Facts That Explain Why We Are The Way We Are</strong>
+    <!-- Ky shembull thirr nje funksion i cili kryen nje kalkulim dhe kthen rezultatin-->
+  <script>
+var x = myFunction(1, 13);
+document.getElementById("var2").innerHTML = x;
+
+function myFunction(a, b) {
+    return a * b;
+}
+</script>
+  <span id="dots">...</span>
+  <span id="more">
+ &diams;  If you announce your goals to other you are less likely to succeed.studies confirm you lose motivation.
+ &diams;  The very last person on your mind before you fall asleep is either the reason for your happiness 
+          or your pain.
+ &diams;  Your mind rewrites monotonous speeches of boring people to make it sound interesting
+ &diams;  The type of music your listen to affexts the way you perceive the world.
+ &diams;  Convincing yourself you slept well tricks your brain into thinking it did.
+ &diams;  It is possible to die from a broken heart.it's called Stress Cardiomyopathy.
+ &diams;  90% of people text things they can't say in person.
+ &diams;  Your decisions are more rational when thought in another language.
+ &diams;  People between the ages of 18 and 33 are the most stressed in the world.after the age of 33,stress leves tend to reduce.
+ &diams;  When you try to remember a past event,you're actually remembering the last time you remembered it rather than the event itself.
+ &diams;  Comedians and funny people are actually more depressed than others.
+ &diams;  There is a gene that can cause you to be negative most of the time.
+ &diams;  Good liars are better at detecting lies of others.
+</span></pre></p>
+<button onclick="myFunction()" id="btn1">Read more</button>
+<script>
+/*Perdorimi i nje funksioni i cili perdoret per te paraqitur tekstin te cilin e kemi fshehur permes display:none.*/
+function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("btn1");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+</script>
+</pre>
+</div>
+<br>
+
+
+<div id="div4" width=1000px >
+<p style="Text-align:center;color:#66ff99;font-family:monospace;font-size:24px;"><b>We'll match you to a counselor that can help with..
+</b></p>
+
+<div class="row">
+  <div class="column">
+    <a href="#dep1"><img src="depresioni.jpg" alt="Snow" ></a>
+	<div class="centered">Depression</div>
+  </div>
+  <div class="column">
+   <a href="#dep2"> <img src="anxiety.jpg" alt="Forest" ></a>
+		<div class="centered">Anxiety</div>
+
+  </div>
+  <div class="column">
+    <a href="#dep3"><img src="stres.jpg" alt="Stress" >	</a>
+	<div class="centered">Stress</div>
+  </div>
+  <div class="column">
+    <a href="#dep4"><img src="addiction.jpg" alt="Addiction" ></a>
+		<div class="centered">Addiction</div>
+  </div>
+  <div class="column">
+    <img src="relationship.jpg" alt="Relationship" >
+	<div class="centered">Relationship</div>
+  </div>
+  <div class="column">
+   <img src="grief.jpg" alt="Grief" >
+	<div class="centered">Grief</div>
+  </div>
+</div>
+</div>
+
+<div class="container1">
+ <img src="psikologe1.jpg" alt="Psikolog" style="width:90px">
+  <p><span> John R. Anderson.</span> Cognitive Psychology.</p>
+ <pre> <blockquote cite="https://thebestschools.org/features/most-influential-psychologists-world/">Anderson was born in Vancouver, British Columbia, Canada, in 1947. He received his bachelor’s degree from the University
+         of British Columbia in 1968, and his PhD in psychology from Stanford University in 1972. Today, he is Professor of Psychology 
+         (with a joint appointment in Computer Science) at Carnegie Mellon University.</blockquote></pre>
+</div>
+
+<div class="container1">
+  <img src="psikologe.jpg" alt="Psikolog" style="width:90px">
+  <p><span> Lisa Feldman Barrett .</span>Biological Psychology.</p>
+  <pre> <blockquote cite="https://thebestschools.org/features/most-influential-psychologists-world/">Barrett (née Feldman) was born in Toronto, Ontario, Canada, in 1963. She received her bachelor’s 
+          degree in psychology from the University of Toronto, and her PhD in clinical psychology at the 
+          University of Waterloo, in Waterloo, Ontario. She is currently University Distinguished Professor
+          of Psychology at Northeastern University, where she heads up the Interdisciplinary Affective Science Laboratory (IASL).</blockquote></pre>
+</div>
+<div class="container1">
+  <img src="psikologe2.jpg" alt="Psikolog" style="width:90px">
+  <p><span> Edward F. Diener .</span>Personality Psychology.</p>
+  <pre> <blockquote cite="https://thebestschools.org/features/most-influential-psychologists-world/">
+       Diener was born in Glendale, California, in <span style="font-size:14px;" id="var1"></span>.He received his bachelor’s degree in psychology 
+       in 1968 from California State University at Fresno, and his PhD in 1974 from the University of Washington. 
+       He is currently Professor Psychology at the University of Virginia and at the University of Utah,
+       as well as the Joseph R. Smiley Distinguished Professor Emeritus at the University
+       of Illinois-Champaign/Urbana and a Senior Scientist with the Gallup Organization..</blockquote></pre>
+</div>
+<script>
+//perdorimi i nje variable x
+var x=1946;
+document.getElementById("var1").innerHTML=x;
+</script>
+<div id="dep1" > <h2 style="text-align:center;">What Is Depression?</h2>
+<p>Being depressed often feels like carrying a very heavy burden, but you are not alone in this struggle. 
+Millions of Americans suffer from some form of depression every year, making it one of the most common mental disorders in the country.
+Gaining a deeper understanding of depression can help begin the journey to recovery. 
+Taking some time to learn more about the causes and symptoms of depression will assist you greatly
+ when it comes time to consider methods of treatment.</p>
+ <i>Which is the average age of people when symptoms of depression appear?</i>
+ <button type="button" onclick="myFunction2()">Click</button>
+ <span id="demo3"></span>
+ <!--Perdorimi i variablave globale -->
+<script>
+var a = 8;
+var b=4;
+function myFunction2() {
+    document.getElementById("demo3").innerHTML = a * b;
+} 
+</script>
+
+<br><br>
+ <div id="flip">Click to see the Prevalence of major depressive episode among USA (2015)</div>
+<div id="panel"><img src="statistikapsiko.png" alt="Statisika ne Usa" width=400px height=300px/></div>
+
+</div>
+ 
+ <div id="dep2"  > <h2 style="text-align:center;">What Is Anxiety?</h2>
+ <p> Anxiety is your body’s natural response to stress. It’s a feeling of fear or apprehension about what’s to come.
+ The first day of school, going to a job interview,
+ or giving a speech may cause most people to feel fearful and nervous.
+But if your feelings of anxiety are extreme, last for longer than six months, 
+and are interfering with your life, you may have an anxiety disorder.</p>
+<div style="width:400px;margin:auto;">
+ <button id="prova">Click to read about anxiety signs and symptoms:</button><br><br>
+
+<div id="para1" style="width:1300px;height:30px;display:none;">- Feeling nervous, restless or tense.</div>
+<div id="para2" style="width:1300px;height:30px;display:none;">- Having a sense of impending danger, panic or doom.</div>
+<div id="para3" style="width:1300px;height:30px;display:none;">- Breathing rapidly (hyperventilation)</div>
+<div id="para4" style="width:1300px;height:30px;display:none;">- Feeling weak or tired.</div>
+<div id="para5" style="width:1300px;height:30px;display:none;">- Trouble concentrating or thinking about anything other than the present worry.
+</div>
+<p style="font-style:italic;">If you need to relax listen to the music below...</p>
+<audio controls autoplay>
+<source src="relax.mp3" type="audio/mp3">
+</audio>
+</div></div>
+ <div id="dep3"  > <h2 style="text-align:center;">What Is Stress?</h2>
+<p>Stress is your body’s way of responding to any kind of demand or threat. 
+When you sense danger—whether it’s real or imagined—the body's defenses kick into high gear in a rapid,
+ automatic process known as the “fight-or-flight” reaction or the "stress response.</p></br>
+ <table border="1">
+ <caption><em>Table1.Signs and symptoms of stress overload</em></caption>
+ <tr><th>Cognitive symptoms</th>
+ <th>Emotional symptoms</th>
+ <th>Physical symptoms</th> </tr>
+ <tr><td>Memory problems</td>
+ <td>Depression or general unhappiness</td>
+ <td>Aches and pains</td></tr>
+ <tr><td>Inability to concentrate</td>
+ <td>Anxiety and agitation</td>
+ <td>Diarrhea or constipation</td></tr>
+ <tr><td>Poor judgment</td>
+ <td>Moodiness, irritability, or anger</td>
+ <td>Nausea, dizzinesstd</tr>
+ <tr><td>Seeing only the negative</td>
+ <td>Loneliness and isolation</td>
+ <td>Chest pain, rapid heart rate</tr>
+ </table>
+</div>
+
+<div id="div2" style="width:420px;margin-top:80px;margin-left:500px;">
+<!-- Vendosja e videos dhe butonave per startim, pauze , zvogelim/zmadhim te videos -->              
+<button onclick="playPause()" class="buton1">PLAY/PAUSE</button>
+<button onClick="makeBig()"  class="buton1">BIG</button>
+<button onclick="makeSmall()"  class="buton1">SMALL</button>
+<button onclick="makeNormal()" class="buton1">NORMAL</button>
+<button onclick="clickCounter()"  class="buton1" type="button" > Play again</button>
+<br /><br />
+<br> 
+<p id="div1"></p>
+
+<video id="video1" width="420">
+<source src="calmdown.mp4" type="video/mp4">
+Shfletuesi juaj nuk mbeshtet videot me HTML5.
+</video>
+<p style="Text-indent:60px;font-size:14px;font-family:cursive;">Video1:How To Calm Down During A Panic Attack</p>
+
+</div>
+
+<!-- Definimi i funksioneve duke perdorur JS DOM per  elementin <video> dhe perdorimi i  localStorage -->
+<script>
+var myVideo=document.getElementById("video1");
+
+function playPause()
+ {
+	if (myVideo.paused)
+	myVideo.play();
+	else
+	myVideo.pause();
+}
+function makeBig()
+ {
+	myVideo.width=500;
+}
+function makeSmall()
+{
+	myVideo.width=350;
+}
+function makeNormal()
+{
+	myVideo.width=420;
+}
+
+function clickCounter()
+ {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.clickcount) {
+            localStorage.clickcount = Number(localStorage.clickcount)+1;
+        } else 
+		{
+            localStorage.clickcount = 1;
+        }
+		 document.getElementById("div1").innerHTML = "Keni shikuar videon " + localStorage.clickcount + " here."; 
+       
+	}
+     else 
+	 {
+        document.getElementById("div1").innerHTML = " Browseri juaj nuk e perkrah localstorage..."; 
+	  
+    }
+}
+
+// Kur levizim posht me maus 20px nga lart faqes,paraqitet butoni.
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// Kur klikojm ne buton ,ai na dergon ne fillim te faqes
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+
+ <div id="dep4" > <h2 style="text-align:center;">What Is Addiction?</h2>
+<p>
+Addiction is a complex disease, often chronic in nature, which affects the functioning of the brain and body.
+It also causes serious damage to families, relationships, schools, workplaces and neighborhoods. 
+The most common symptoms of addiction are severe loss of control, continued use despite serious consequences, 
+preoccupation with using, failed attempts to quit, tolerance and withdrawal. Addiction can be effectively prevented,
+ treated and managed by healthcare professionals in combination with family or peer support.</p>
+ <button id="show">Show Fact</button>
+
+ <button id="hide">Hide Fact</button>
+<div style="Width:620px;margin:auto;"><pre id="demo" style="display:none;"><mark>40 million</mark> Americans ages 12 and older—or more than 1 in 7 people—abuse 
+or are addicted to nicotine, alcohol or other drugs. This is more than the number 
+of Americans with heart conditions <mark>(27 million)</mark>, diabetes <mark>(26 million)</mark> or cancer <mark>(19 million)</mark></pre>
+
+
+</div>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<div class="container2">
+  <img src="addiction1.png" alt="Drugs" title="Drugs" style="width:100%;">
+  <div class="content2">
+    <h4>WHAT IS THE DIFFERENCE BETWEEN DRUG OR ALCOHOL ABUSE AND ADDICTION?</h4>
+    <p>There is a range in the severity of substance problems: from mild to moderate to severe. 
+	Drug or alcohol abuse is a mild substance problem, defined by having two or three symptoms of addiction. 
+	People who abuse drugs or alcohol can experience serious consequences such as accidents, overdoses, crime,
+	school problems, violence and suicide. Many people experience alcohol or drug abuse problems, but are able to
+	stop using or change their pattern of use without progressing to addiction.</p>
+  </div>
+</div><Br>
+<div style="width:1000px;height:700px;margin:Auto;">
+  <img id="imgg" src="psiko3.jpg" alt="Psychology" width=170px height=170px style="float:right;margin-top:20px;margin-right:30px;border-radius:10px;"/>
+<p style="Text-align:Center;color:Blue;">The Anxiety and Depression Association of America</p>
+<pre> The Anxiety and Depression Association of America (ADAA) is an international
+ nonprofit membership organization (with more than 1,800 professional mental health members) 
+ and a leader in education, training, and research for anxiety, depression and related disorders.</pre>
+<div id="div12"  ondrop="drop(event)" ondragover="allowDrop(event)">
+<img id="drag1" src="organizata.jpg" draggable="true" ondragstart="drag(event)" width="330" height="60">
+</div>
+<Br>
+<div id="div12" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br>
+<p style="Text-align:Center;color:Blue;">National Institute of Mental Health</p>
+<pre> The National Institute of Mental Health (NIMH) is one of 27 institutes and centers 
+ that make up the National Institutes of Health (NIH). The NIH, in turn, is an agency of the
+ United States Department of Health and Human Services and is the primary agency of the United States 
+ government responsible for biomedical and health-related research.</pre>
+<img id="drag1" src="organizata1.jpg"  width="336" height="69">
+<br>
+<p style="Text-align:Center;color:Blue;">BeyondBlue</p>
+<pre> Beyondblue is an Australian independent non-profit organisation working to address issues associated with depression,
+ suicide, anxiety disorders and other related mental disorders.beyondblue works in partnership with health services, 
+ schools, workplaces, universities, media and community organisations, as well as people living with anxiety and depression,
+ their friends and family, to raise community awareness of anxiety and depression and reduce associated stigma. </pre>
+<img id="drag1" src="organizata2.jpg"  width="336" height="69">
+
+</div>
+		  <a href="playgame.html" target="_blank"><p style="text-align:center;">Are you tired? Get some time to relax!</p></a>
+		  
+
+</body>
+</html>

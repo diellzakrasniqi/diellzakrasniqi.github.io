@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+            <title>Contact</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="contact.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+/*Perdorimi i funksionit startTime() per paraqitjen e ores,minutave dhe sekondave kur loadohet faqja  */
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('txt').innerHTML =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+<!-- Perdorimi i JS per ndryshim te background ne baze te ores!*******************--> 
+	
+	day=new Date() 
+	x=day.getHours() 
+	
+	if(x>=0 && x<4) /*AM */ 
+	{document.write('<style type="text/css">body{background:white;}></style>')} 
+	
+	else 
+	if(x>=4 && x<12) 
+	{document.write('<style type="text/css">body{background:pink;}</style>')} 
+	
+	else 
+	if(x>=12 && x<18) 
+	{document.write('<style type="text/css">body{background:grey;}</style>')} 
+	
+	else 
+	if (x>=18 && x<24) 
+	{document.write('<style type="text/css">body{background:#cc66ff;}</style>')} 
+</script>
+<script>
+
+function kontrollo_emrin()
+{
+ 	var message, x;
+    message = document.getElementById("parapara1");
+    message.innerHTML = "";
+    x = document.getElementById("message1").value;
+    try
+	{ 
+        if(x == "")  throw "Fusha e zbrazet";
+        if(Number(x)) throw "Nuk lejohet numer";
+    }
+    catch(err)
+	{
+        message.innerHTML =  err;
+    }
+}
+function kontrollo_mbiemrin()
+{
+ 	var message, x;
+    message = document.getElementById("parapara2");
+    message.innerHTML = "";
+    x = document.getElementById("message2").value;
+    try
+	{ 
+        if(x == "")  throw "Fusha e zbrazet";
+        if(Number(x)) throw "Nuk lejohet numer";
+    }
+    catch(err)
+	{
+        message.innerHTML =  err;
+    }
+}
+/*Perdorimi i funksionit phonenumber() qe ben validimin e input field per numer te telefonit,duke perdorur regex ashtu qe numri i telefonit te jete i kesaj forme 222 333 444 */
+function phonenumber(){
+    var phone = document.getElementById("tel");
+    var RE = /(^\d{3} \d{3} \d{3})$/;
+    if(!RE.test(phone.value))
+    {
+        alert("You have entered an invalid phone number");
+        return false;
+    }
+	else
+	    {
+        alert("You have entered a valid phone number");
+    }
+	
+}
+/*Perdorimi i funksionit emailvalid() qe ben validimin e input field per email,
+duke perdorur regex ashtu qe email duhet te fillojme me shkronja,mund te permbaj edhe numrat nga 0-9 gjithashtu edhe  shenjen . ose -,
+pastaj vjen shenja @,pas shenjes @ duhet te jete forma psh @hotmail.com ose @gmail.com me rendsi parapashtesa e fundit duhet te ket max 2 deri 4 shkronja*/
+
+function emailvalid(){
+    var phone = document.getElementById("email");
+    var RE = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z])+\.)+([a-zA-Z]{2,4})+$/;
+    if(!RE.test(phone.value))
+    {
+        alert("You have entered an invalid email address");
+        return false;
+    }
+    else
+	    {
+        alert("You have entered a valid email address");
+    }
+}
+/* Perdorimi i funksionit areavalid per validimin e textarea dukeperdorur regex permes te cilit teksti duhet te filloj me shkronja dhe mund te permbaj
+edhe numra dhe shenjen . ose \ dhe duhet te jete i gjate 10 deri 50 karaktere per te qene valid*/
+function areavalid(){
+    var phone = document.getElementById("message");
+    var RE = /^[a-zA-Z0-9\.\-]{10,50}$/;
+    if(!RE.test(phone.value))
+    {
+        alert("You have entered an invalid text message");
+        return false;
+    }
+    else
+	    {
+        alert("You have entered a valid text message");
+    }
+}
+</script>
+<style>
+#div1  {border:1px solid grey;
+width:400px;
+height:800px;
+margin-left:200px;
+margin-top:100px;
+background-image:url(contact2.jpg);
+background-color:white;
+border-radius:10px;
+background-repeat:no-repeat;
+;}
+
+#i1 {
+margin-left:120px;
+margin-top:120px;}
+
+#i2 {
+margin-left:120px;
+}
+
+#i3 {
+margin-left:120px;
+}
+
+#div2  {border:1px solid grey;
+width:400px;
+height:800px;
+margin-left:602px;
+margin-top:-802px;
+background-color:white;
+border-radius:10px;}
+
+#tbl1{border-collapse:collapse;
+margin-left:10px;}
+
+td{padding:5px;}
+tr{
+background-color:burlywood;}
+
+
+#tbl2{border-collapse:collapse;
+margin-left:100px;
+margin-bottom:-60px;}
+
+#tbl4 {margin-left:60px;}
+
+input:focus {background-color:#FFE4E1;}
+
+#myCanvas { margin-left:470px;
+margin-top:-90px;
+}
+
+#txt {border:1px solid white;
+margin-left:1200px;
+margin-top:15px;
+width:70px;
+color:white ;
+font-size:19px;}
+#txt:hover{ background-color:plum;}
+
+
+#i4 {margin-left:120px;}
+
+#i5 {margin-left:120px;}
+
+.navbar {
+    overflow: hidden;
+    font-family:monospace;
+	margin-left:300px;
+	width:1000px;
+		background-image:url("contactnavbar.jpeg");
+		border-radius:10px;
+
+}
+
+.navbar a {
+    float: left;
+    font-size: 14px;
+    color: black;
+    text-align: center;
+    padding: 14px 30px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 14px;    
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: white;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+#div222{position:Relative;
+margin-left:-170px;
+margin-bottom:-50px;}
+
+</style>
+
+</head>
+<body onload="startTime()">
+ <div id="div222">
+<div class="navbar">
+  <a href="homepage.html">Home</a>
+  <div class="dropdown">
+    <button class="dropbtn">Topics
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+     	<a href="technology.html">Technology</a>
+      <a href="sportculture.html">Sport and Culture</a>
+      <a href="psikologji.html">Psychology</a>
+    </div>
+  </div> 
+    <a href="aboutus.html">About us</a>
+	<div class="dropdown">
+    <button class="dropbtn">Other
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+	      <a href="fashion.html">Fashion</a>
+
+      <a href="travelfood.html">Travel and Food</a>
+    </div>
+  </div> 
+</div></div>
+
+
+<div id="txt"></div>
+
+
+
+<div id="div1" ><i  id="i1"class="material-icons">&#xe0c8;</i> <span style="color:Black;font-size:19px;";>Address<span>
+<address style="text-indent:100px;color:blue">Rr.Isa Kastrati,Prishtin&euml</address>
+<br>
+<i id="i2" class="material-icons">&#xe0cd;</i><span style="color:Black;font-size:19px;">Lets Talk<span> 
+<p style="color:blue;text-indent:130px;font-size:19px;font-style:italic;">8101726051140</p>
+
+<i id="i3"class="material-icons">&#xe0be;</i><span style="color:Black;font-size:19px;">General Support<span> 
+<p style="color:blue;text-indent:100px;font-size:19px;font-style:italic;"><a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">abouteverything@gmail.com</a>
+</p>
+
+<p style="color:black;text-indent:100px;font-size:19px;font-style:italic;">You can find us also on:</a>
+</p>
+<i id="i4" style="font-size:24px" class="fa">&#xf081;</i><span style="color:Black;font-size:19px;"><a href="https://twitter.com/"> 
+  Twitter</span> </a>
+<br><br>
+ <i id="i5"  style="font-size:24px" class="fa">&#xf082;</i><span style="color:Black;font-size:19px;">
+ <a href="https://web.facebook.com/Everything-you-need-to-know-189348015271607/ "> Facebook</span> </a> 
+ 
+ <br> <p id="para1" style="border:1px solid grey;width:250px;height:120px;margin-left:70px;margin-top:50px;">You can also buy our book 
+<a href="https://www.amazon.com/Knowledge-Book-Everything-Need-Century/dp/142620518X"><span style="margin-left:100px;"> here.</span></a>
+ </p>
+ 
+ 
+ <!--Perdorimi i elementit canvas duke perdorur property te ndryshme!! -->
+<canvas id="myCanvas" width="250" height="200" style="border:1px solid white;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(120,100,100,0,2*Math.PI);
+ctx.strokeStyle="burlyWood";
+ctx.stroke();
+ctx.font = "16px Monospace";
+ctx.fillText("Thank you so much",50,60);
+ctx.fillText("for contacting us!",50,90);
+ctx.font="16px Arial";
+ctx.fillStyle="red";
+ctx.fillText("Have a great day!",60,140);
+
+</script> </div>
+
+
+
+<div id="div2"><p style="text-align:center;font-size:20px">SEND US A MESSAGE</p>
+<!--Perdorimi i formes,brenda te ciles perdoret elementi <table> me rreshtat <tr> brenda te cileve jane perdorur inputet e ndryshme te formes -->
+<form action="mailto:someone@example.com" method="post" enctype="text/plain" name="form1">
+<input type="text" name="text" value="Tell us your name*" disabled style="margin-left:100px;margin-top:10px;color:black;
+padding:10px;font-style:italic;" />
+
+<table border="1" id="tbl1">
+<!-- Perdorimi i atributit te ri sic eshte autofocus permes te cilit ne rastin kur faqja behet load,ky input field menjehere fokusohet i pari,gjithashtu edhe perdorimi
+i atributit placeholder-->
+<tr rowspan="2"><td><input type="text" name="name" id="message1" autofocus placeholder="First Name" required /></td> 
+<button type="button" onclick="kontrollo_emrin()" style="margin:0px">Test</button>
+<button type="button" onclick="kontrollo_mbiemrin()">Test</button><br>
+
+<!--Perdorimi i eventit onchange per rritjen e shkronjave ne text field te mbiemrit" -->
+<td><input type="text" name="lastname" onchange="upper()" id="message2" placeholder="Last Name" required></td></input></td><tr>
+<script> 
+function upper()
+{
+var x=document.getElementById("message2");
+x.value=x.value.toUpperCase();
+}
+</script>
+</table>
+<span id="parapara1" style="color:red;margin-left:50px;;font-size:14px;"></span>
+	<span id="parapara2" style="color:red;margin-left:100px;font-size:14px;"></span>
+
+<input type="text" name="email" value="Enter your email*"  disabled style="margin-left:100px;margin-top:10px;color:black;
+padding:10px;font-style:italic;"/>
+
+<table border="1" id="tbl2">
+
+<tr><td><input type="text" name="email" id="email" autocomplete="on"  placeholder="Eg. example@email.com" required /></td></tr>
+<button type="button" onclick="emailvalid()">Test</button><br>
+</table>
+
+<input type="text" name="name" value="Enter phone number*" disabled style="margin-left:100px;margin-top:70px;color:black;
+padding:10px;font-style:italic;"/>
+<table border="1" id="tbl2">
+<tr><td><input type="text" name="tel" id="tel" placeholder="Eg. 044 xxx xxx" ></td></tr>
+<button type="button" onclick="phonenumber()">Test</button><br>
+</table>
+<input type="text" name="text" value="Message*" disabled style="margin-left:100px;margin-top:70px;color:black;
+padding:10px;font-style:italic;">
+<table border="1" id="tbl4">
+<tr><td><textarea  name="message" id="message" cols="30" rows="6" required></textarea></td>
+<button type="button" onclick="areavalid()">Test</button><br>
+
+<tr><td><input type="image" src="submitemail.png" title="Submit" alt="Submit" width="120" height="48" style="margin-left:50px;"></td></tr>
+</form>
+
+</div>
+
+</body>
+</html>

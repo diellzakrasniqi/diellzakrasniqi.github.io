@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html manifest="demo.appcache">
+
+<head>
+            <title>Fashion</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="fashion.css" type="text/css">
+<script src="fashion.js"></script>
+<script>
+/* Perdorimi i jQuery duke perdorur metoden append() per paraqitjen e teksteve ne menyra te ndryshme .
+Elementet jane krijuar me text/HTML,jQuery dhe Javascript/DO */
+function appendText() {
+    var txt1 = "<ol start='7'><li ><q>How can you live the high life if you do not wear the high heels?</q> —Sonia Rykiel.</li></ol>";              // Krijo text me HTML
+    var txt2 = "<ol start='8'><li ><q>Shoes transform your body language and attitude. They lift you physically and emotionally.</q> —Christian Louboutin.</li></ol>";  // Krijo text me jQuery 
+    var txt3 = document.createElement("p"); // Krijo permes DOM
+    txt3.innerHTML = "<ol start='9'><li ><q>Girls do not dress for boys. They dress for themselves, and of course, each other. If girls dressed for boys, they’d just walk around naked at all times.</q>—Betsey Johnson.</li></ol>";               // Create text with DOM
+    $("#appendtextt").append(txt1, txt2, txt3);     // Append new elements
+}
+	</script>
+        <script> 
+		/*Perdorimi i jQuery duke perdorur metoden slideToggle() */
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+    });
+});
+</script>
+<script>
+//Perdorimi i jQuery attr() metodes qe perdoret me marr(Get) vlerat e atributit , e verejm tek butoni Show link
+
+$(document).ready(function(){
+    $("#vsbuton").click(function(){
+        alert($("#w3s").attr("href"));
+    });
+});
+</script>
+        <style>
+    
+.checked {
+  color: orange;
+}
+
+#div1{position:Relative;
+margin-left:auto;
+margin-bottom:-50px;}
+
+/*#div2 {height:100px;
+background-image:url(logofashion.png);
+background-repeat:no-repeat;
+margin:Auto;
+width:1000px;} */
+
+/* Perdorimi i klases .glow duke perdorur property ANIMATION me vetitet e tij, per stilimin e tekstit HELLO FASHION,gjithashtu perdorimi i @-webkit-keyframes */
+.glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+  margin-right:60px;
+}
+
+@-webkit-keyframes glow {
+  from {
+     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}  
+        </style>
+</head>
+<body>
+    <div id="div1">
+<div class="navbar">
+  <a href="homepage.html">Home</a>
+  <div class="dropdown">
+    <button class="dropbtn">Topics
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+     	<a href="technology.html">Technology</a>
+
+      <a href="sportculture.html">Sport and Culture</a>
+      <a href="psikologji.html">Psychology</a>
+    </div>
+  </div> 
+   <a href="contact.html">Contact</a>
+    <a href="aboutus.html">About us</a>
+	<div class="dropdown">
+    <button class="dropbtn">Other
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="travelfood.html">Travel and Food</a>
+    </div>
+  </div> 
+</div></div>
+<div id="div1" style="width:200px;height:100px;"><br>
+  Contact:
+   <a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">
+   <i style="font-size:24px" title="Mail" class="fa">&#xf003;</i></a>
+  <a href="https://www.instagram.com/hellofashionblog/" target="_blank"><i title="Instagram" style="font-size:24px;margin-top:0px;" class="fa">&#xf16d;</i>
+      </a>
+       <a href="https://twitter.com/twitterfashion?lang=en" target="_blank"> <i style="font-size:24px" title="Twitter" class="fa">&#xf099;</i></a>
+  </div>
+  <p id="demo" style="margin-left:1100px;color:violet;"></p>
+    
+<script>
+/*Perdorimi i JS Switch  duke perdorur metoden The getDay() qe kthen diten e javes si numer mes 0 dhe 6 
+(Sunday=0, Monday=1, Tuesday=2 ..).Ky shembull perdor numrin per diten e javes per te kalkuluar emrin e dites se javes */
+var day;
+switch (new Date().getDay()) {
+    case 0:
+        day = "Sunday";
+        break;
+    case 1:
+        day = "Monday";
+        break;
+    case 2:
+        day = "Tuesday";
+        break;
+    case 3:
+        day = "Wednesday";
+        break;
+    case 4:
+        day = "Thursday";
+        break;
+    case 5:
+        day = "Friday";
+        break;
+    case  6:
+        day = "Saturday";
+}
+document.getElementById("demo").innerHTML = "Today is " + day;
+</script>
+<div id="div2">
+<h1 class="glow">HELLO FASHION</h1>
+
+</div>
+
+<div class="row">
+  <div class="column">
+    <img class="opac" src="A1.jpg" alt="Fashion1" style="width:100%">
+  </div>
+  <div class="column">
+    <img class="opac" src="A2.jpg" alt="Fashion2" style="width:100%">
+  </div>
+  <div class="column">
+    <img class="opac" src="A3.jpg" alt="Fashion3" style="width:100%">
+  </div>
+   <div class="column">
+    <img class="opac" src="A4.jpg" alt="Fashion4" style="width:100%">
+  </div>
+   <div class="column">
+    <img class="opac" src="A5.jpg" alt="Fashion5" style="width:100%">
+  </div>
+   <div class="column">
+    <img class="opac" src="A6.jpg" alt="Fashion6" style="width:100%">
+  </div>
+   <div class="column">
+    <img class="opac" src="A7.jpg" alt="Fashion7" style="width:100%">
+  </div>
+   <div class="column">
+    <img class="opac" src="A8.jpg" alt="Fashion8" style="width:100%">
+  </div>
+   <div class="column">
+    <img class="opac" src="A9.jpg" alt="Fashion9" style="width:100%">
+  </div>
+   <div class="column">
+    <img class="opac" src="A10.jpg" alt="Fashion10" style="width:100%">
+  </div>
+</div>
+<div class="row">
+  <div class="column">
+    <img class="opac" src="B1.jpg" alt="Fashion1" style="width:100%">
+  </div>
+  <div class="column">
+    <img class="opac" src="B2.jpg" alt="Fashion2" style="width:100%">
+  </div>
+  <div class="column">
+    <img class="opac" src="B3.jpg" alt="Fashion3" style="width:100%">
+  </div>
+   <div class="column">
+    <img class="opac" src="B4.jpg" alt="Fashion4" style="width:100%">
+  </div>
+   <div class="column">
+    <img class="opac" src="B5.jpg" alt="Fashion5" style="width:100%">
+  </div>
+   <div class="column">
+    <img class="opac" src="B6.jpg" alt="Fashion6" style="width:100%">
+  </div>
+   <div class="column">
+    <img class="opac" src="B7.jpg" alt="Fashion7" style="width:100%">
+  </div>
+   <div class="column">
+    <img class="opac" src="B8.jpg" alt="Fashion8" style="width:100%">
+  </div>
+   <div class="column">
+    <img class="opac" src="B9.jpg" alt="Fashion9" style="width:100%">
+  </div>
+   <div class="column">
+    <img class="opac" src="B10.jpg" alt="Fashion10" style="width:100%">
+  </div>
+</div><br><br>
+<div id="div3" style="width:1000px;height:300px;margin:auto"><br><br>
+  <h3>What is Fashion?</h3> <!--Perdorimi i multiple background images eshte vendosur ne file fashion.css -->
+  Fashion is a popular style, especially in clothing, footwear, lifestyle,
+   accessories, makeup, hairstyle and body.Fashion is a distinctive and often constant trend in the style
+   in which people present themselves. A fashion can become the prevailing style in behaviour or manifest
+   the newest creations of designers, technologists, engineers, and design managers.
+  </div><br>
+  <!-- Perdorimi i property animation-timing-function per klasen #div4 dhe  i @keyframes ,e gjejme tek fashion.css -->
+  <div class="div4" >"What you wear is how you present yourself to the world, especially today, when human contacts are so quick. Fashion is instant language." <b>—Miuccia Prada</b></div>
+  <h2 style="text-align:center;">Striking Photos of Cultural Fashions You Have to See</h2><br>
+  <div class="row1">
+    <div class="column1">
+      <img src="fashionculture1.jpg" id="flip1"  style="width:100%">
+      <div class="panel1">Intricate beading flows around a Maasai tribeswoman dressed in traditional clothing near Amboseli National Park, Kenya.</div>   
+    
+    </div>
+    
+     <div class="column1">
+    <img src="fashionculture2.jpg" id="flip2"  style="width:100%">
+        <div class="panel1">Punk culture often embraces mixing plaid with leather, spikes, and edgy hairstyles, as seen here at the Rebellion Punk Festival in Blackpool, United Kingdom.</div>
+
+  </div>
+  <div class="column1">
+    <img src="fashionculture3.jpg" id="flip3"  style="width:100%">
+        <div class="panel1">Modern interpretations of Xhosa head wraps can often be found in cities throughout the world.</div>
+
+  </div>
+    <div class="column1">
+    <img src="fashionculture4.jpg" id="flip4"  style="width:100%">
+        <div class="panel1">Tuareg men are sometimes referred to as "blue men" as the vibrant dye of their head wraps stains their skin with a blue hue.</div>
+
+  </div>
+</div>
+<div id="div5" height="500px">
+<h2 style="text-align:center;">FASHION SHOW</h2>
+<i id="quotess">
+A fashion show (French défilé de mode) is an event put on by a fashion designer to 
+showcase their upcoming line of clothing and/or accessories during Fashion Week.
+ Fashion shows debut every season, particularly the Spring/Summer and Fall/Winter seasons. 
+ This is where the latest fashion trends are made. The two most influential fashion weeks are Paris
+ Fashion Week and New York Fashion Week, which are both semiannual events.The <span id="span1"></span>, London, Sibiu 
+ and Berlin fashion weeks are also of global importance.</i><br>
+ <!-- PERDORIMI I DOM CSS per nderrimin e fontit dhe madhesesis -->
+<script>
+document.getElementById("quotess").style.fontFamily = "Monospace";
+document.getElementById("quotess").style.fontSize = "16px";
+
+</script>
+ <!-- Perdorimi i vargut ne JS dhe qasja e elementeve brenda vargjeve-->
+ <script>
+var cities = new Array("Milan", "New York", "Munich");
+document.getElementById("span1").innerHTML = cities[0];
+</script>
+<p style="text-align:center;"><em>Listen 15 Things You Didn't Know About Coco Chanel...</em></p>
+ <p style="text-align:center;">
+ <!-- Perdorimi i audios -->
+     <audio controls style="margin-left:30px;background-color:pink;">
+<source src="cocochanel.mp3" type="audio/mp3">
+</audio></p>
+<img src="show1.jpg" id="show1" width="300px" height="300px">
+<img src="show2.jpg" id="show2" width="300px" height="300px">
+<img src="show3.jpg" id="show3" width="300px" height="300px">
+<img src="show4.jpg" id="show4" width="300px" height="300px"><Br><br>
+<br>
+<button onclick="myFunction()" style="border-radius:8px;padding:8px;color:white;background-color:rgb(240, 179, 255)">The tallest models of all time are:</button>
+<i id="mod2"></i><br><br>
+<script>
+/* Perdorimi i nje JS vektori dhe paraqitja e te gjitha elementeve te tij */
+var models = ["Michelle Buswell", " Karlie Kloss", "Amazon Eve", "Hana Soukupova"];
+document.getElementById("mod2").innerHTML = models;
+/*Perdorimi i nje funksioni i cili si rezultat kthen vektorin e lartecekur te sortuar permes JS metodes sort() */
+function myFunction() {
+    models.sort();
+    document.getElementById("mod2").innerHTML = models;
+}
+</script>
+<button onClick="numrimaksimal()" style="border-radius:8px;padding:8px;color:white;background-color:rgb(240, 179, 255)">The most expensive shoes cost:</button>
+<i id="demo1"></i><br><br>
+	<button onclick="myFunction1()" style="border-radius:8px;padding:8px;color:white;background-color:rgb(240, 179, 255)">Top 5 richest fashion designers:</button>
+   <i id="demo3"></i><br><Br>
+   	  <button onclick="myFunction2()" style="border-radius:8px;padding:8px;color:white;background-color:rgb(240, 179, 255)">The age of Karl Lagerferd is:</button>
+<i id="demo4"></i><br><br>
+<button onclick="myFunction3()" style="border-radius:8px;padding:8px;color:white;background-color:rgb(240, 179, 255)">The second store of Stella McCartney was opened in:</button><i id="demo5"> England!</i>
+</div><br>
+<b style="font-size:23px;">The following is a list of some of the most timeless and biggest fashion icons of all time.</b><br><br>
+<!-- Perdorimi i SET JQUERY dhe jquery efekteve(callback)-->
+<div class="row5">
+  <div class="column5">
+    <img src="icon1.jpg" alt="Wiggy" style="width:95%"><br>
+	<button id="icon1"/>Name</button><span id="test1"> </span><br><Br>
+		<button id="but1"/>Fact</button><br>
+		<p id="p11">Click to read  a fact about Twiggy</p>
+</div>
+  <div class="column5">
+    <img src="icon2.jpg" alt="Madonna" style="width:95%">
+		<button id="icon2"/>Name</button><span id="test2"> </span><br><br>
+		<button id="but2"/>Fact</button><br>
+		<p id="p22">Click to read  a fact about Madonna</p>
+
+  </div>
+    <div class="column5">
+    <img src="icon3.jpg" alt="Audrey Hepburn" style="width:95%">
+		<button id="icon3"/>Name</button><span id="test3"> </span>
+		<br><Br>
+                
+                <button id="but3"/>Fact</button><br>
+		<p id="p33">Click to read  a fact about Audrey Hepburn</p>		
+		</div>
+     <div class="column5">
+    <img src="icon4.jpg" alt="Michael Jackson" style="width:95%">
+		<button id="icon4"/>Name</button><span id="test4"> </span><br><br>
+		<button id="but4"/>Fact</button><br>
+		<p id="p44">Click to read  a fact about Michael Jackson</p>
+					
+
+ </div>
+
+
+ <div class="column5">
+    <img src="icon5.jpg" alt="Naomi Campbell" style="width:95%">
+		<button id="icon5"/>Name</button><span id="test5"> </span><Br><br>
+		<button id="but5"/>Fact</button><br>
+		<p id="p55">Click to read  a fact about Naomi Campbell</p>				
+
+  </div>
+    <div class="column5">
+    <img src="icon6.jpg" alt="Princess Diana" style="width:95%">
+		<button id="icon6"/>Name</button><span id="test6"> </span><br><br>
+		<button id="but6"/>Fact</button><br>
+		<p id="p66">Click to read  a fact about Princess Diana</p>
+				
+
+  </div>
+    </div>
+
+<hr>
+<div id="div6" height="500px;">
+<p style="text-align:Center;font-size:30px;font-style:italic;">Victoria's Secret Fashion Show</p>
+
+<p id="backp" style="font-size:24px;font-style:oblique;">
+
+The Victoria's Secret Fashion Show is an annual show sponsored by and featuring Victoria's Secret, 
+a brand of lingerie and sleepwear. Victoria's Secret uses the show to promote and market its goods 
+in high-profile settings. The show features some of the world's leading fashion models such as current
+ Victoria's Secret Angels :<span id="model1"> </span>, Behati Prinsloo,<span id="model2"> </span>,<span id="model3"> </span>, 
+ Jasmine Tookes,  <span id="modelet"></span> and Josephine Skriver.</p>
+ <p>You can see photos of VS's models here: <a href="https://ww.victoriassecret.com/fashion-show" target="_blank" id="w3s">Victoria Secret</a></p>
+ <p><button id="vsbuton" style="background-color:violet;padding:10px;">Show link</button></p>
+<!-- Perdorimi i JS metodes concat() tek array per bashkimin e dy vektoreve te cekur-->
+<script>
+var arr1 = ["Sara Sampaio", "Romee Strijd"];
+var myModels = arr1.concat(["Stella Maxwell", "Taylor Marie Hill", "Martha Hunt "]); 
+document.getElementById("modelet").innerHTML = myModels;
+</script>
+<!--krijimi dhe perdorimi i objekteve ne JS-->
+<script>
+var person = {
+    firstName : "Adriana",
+    lastName  : "Lima",
+    age       : 38,
+    eyeColor  : "blue"
+};
+
+document.getElementById("model1").innerHTML =
+person.firstName + " " + person.lastName;
+</script>
+
+<script>
+// Create an object:
+var person = {
+    firstName: "Candice",
+    lastName : "Seanepoel",
+    bornYear      : 1988,
+    fullName : function() {
+       return this.firstName + " " + this.lastName;
+    }
+};
+
+// Display data from the object:
+document.getElementById("model2").innerHTML = person.fullName();
+</script>
+
+
+
+<!-- perdorimi i unazes FOR -->
+<script>
+var modelss = ["Lily Aldridge", ",Lais Ribeiro", ",Elsa Hosk"];
+var i, len, text;
+for (i = 0, len = modelss.length, text = ""; i < len; i++) {
+    text += modelss[i];
+}
+
+document.getElementById("model3").innerHTML = text;
+</script>
+<img id="show11" src="vshow.jpg">
+<img id="show22" src="vshow1.jpg">
+<img id="show55" src="vshow2.jpg">
+<img id="show56" src="vshow3.jpg">
+
+</div>
+<br><Br>
+<!--perdorimi i keyframe rule ne faqen fashion.css-->
+<div id="div7" style="border:1px solid black;width:1300px;">
+<p style="text-align:center;font-size:21px;font-style:italic;">LONDON FASHION WEEK</P>
+<p style="font-family:monospace;font-size:18px;">London Fashion Week (LFW) is a clothing trade show that takes place in London twice a year, in February and September. 
+Showcasing over <span id="numer"></span> designers to a global audience of influential media and retailers, it is one of the "Big Four" fashion weeks,
+ along with the New York, Milan and Paris.
+ <!--PERDORIMI I JS OPERATORIT PER MBLEDHJE-->
+ <Script>
+ var x=100,y=150,z=x+y;
+ document.getElementById("numer").innerHTML=z;
+ </script>
+ Organised by the British Fashion Council (BFC) for the London Development Agency with help from the Department for Business, 
+ Innovation and Skills, London Fashion Week first took place in October 1983.
+
+</p>
+
+<div class="main1">
+<div class="row1">
+  <div class="column1">
+    <div class="content11">
+      <img src="londonshow1.jpg" alt="London Show" style="width:100%">
+      <h3>2005</h3>
+      <p>Models wearing Jessica Ogden's autumn/winter collection at London Fashion week in London on February 15, 2005. </p>
+    </div>
+  </div>
+    <div class="column1">
+    <div class="content11">
+    <img src="londonshow.jpg" alt="London Show" style="width:100%">
+     <h3>2006</h3>
+      <p>Models Paris Brown,Julia Cruz,Monica Perry, Robby Turner and Anna Kenya opened Julien Macdonald Spring/Summer collection show at London Fashion Week. </p>
+    </div>
+  </div>
+    <div class="column1">
+    <div class="content11">
+    <img src="londonshow2.jpg" alt="London Show" style="width:100%">
+      <h3>2007</h3>
+      <p>Models walks down the catwalk during the Biba LFW Spring Summer 2008 show at London Fashion Week 2007 on September 20, 2007 in London, England.</p>
+    </div>
+  </div>
+    <div class="column1">
+    <div class="content11">
+    <img src="londonshow3.jpg" alt="London Show" style="width:100%">
+      <h3>2008</h3>
+       <p>London Fashion Week showcases the best of British fashion design talent to a global
+audience of media and fashion buyers. Over 50 catwalk shows on the official show schedule. </p>
+    </div>
+  </div>
+    </div></div>
+</div><br><br><br>
+
+<div>
+<h4 STYLE="text-align:center;color:#cc3300;">SOME  INTERESTING FAMOUS FASHION DESIGNERS FACTS</h4>
+<i>1.Click the button to check  if it's TRUE that Queen Elizabeth I ordered that all women should wear hats on Sunday.</i>
+<button onclick="funksioni1()">Click</button>
+<i id="prova1" style="text-transform:uppercase;color:red;"></i>
+<!-- PERDORIMI I JS metodes test() tek REGEX.Kjo metode teston per nje match ne nje string.Kjo metode kthen true nese 
+e gjen nje match,perndryshe kthen false--> 
+<script>
+                                function funksioni1() {
+    var str = "Wear hats on Sunday";
+    var patt = new RegExp("Sunday");
+    var res = patt.test(str);
+    document.getElementById("prova1").innerHTML = res;
+}
+</script>
+<br>
+<i>2.Click the button to read the name of the inventor of modern bikini.</i>
+<button onclick="funksioni2()">Click</button>
+<i id="prova2" style="text-transform:uppercase;color:red;"></i>
+<!--PERDORIMI I METODES exec() TEK RegEX .Kjo metode teston per nje match ne nje string.Kjo metode kthen tekstin qe eshte perputhur nese e gjen nje match
+perndryshe kthen null. -->
+<script>
+function funksioni2() {
+    var str = "Louis Rerard named it after the Bikini Atoll where the U.S. did extensive nuclear testing";
+
+    //look for "Hello"
+    var patt = /Louis Rerard/g;
+    var rezultati = patt.exec(str);
+
+   
+    document.getElementById("prova2").innerHTML = rezultati;
+}
+</script>
+<br>
+<i>3.Barbie’s first outfit was a black-and-white striped one-piece swimsuit.</i><br>
+<i>4.Nightclothes were first fashioned in 16th century. Until then, people would sleep in day clothes or naked.</i><br>
+<i>5.Until 19th century, men’s shirts were considered to be underwear.</i><br>
+6.<i id="prova3"></i>
+In 1983, Calvin Klein was listed on the International Best Dressed List
+<br>
+<button onclick="appendText()">Click here to Read 3 more facts!!</button>
+<div id="appendtextt"></div>
+<script>
+<!--Perdorimi i nje konstruktori dhe krijimi i objektit-->
+// Constructor function for Person objects
+function Person(first, last, year, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.year = year;
+    this.eyeColor = eye;
+}
+
+// Create a Person object
+var designer = new Person("Calvin", "Klein", 1983, "blue");
+
+document.getElementById("prova3").innerHTML ="In" "+ designer.year + ","+designer.first+" "+designer.last+" was listed on the International Best Dressed List";
+
+</script>
+
+</div>
+<div style="width:200px;float:right">
+<h2>User Rating</h2>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+<span class="fa fa-star"></span>
+</div>
+
+</body>
+</html>
